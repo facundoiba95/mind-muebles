@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+header img{
+    width: 200px;
+}
+header{
+    display: flex;
+    align-items: center;
+}
