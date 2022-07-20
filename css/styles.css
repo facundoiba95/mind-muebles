@@ -130,6 +130,33 @@ padding:5px;
     color:black;
 }
 
+/* SLIDER PUBLICITARIO*/
+.slider-publicitario-container{
+    overflow: hidden;
+}
+.slider-publicitario img{
+   width: 100%;
+   height: 600px;
+}
+.slider-publicitario{
+    display: flex;
+    width: 300%;
+    animation: cambiarImagen 10s infinite alternate ease-in-out;
+    
+}
+.slider-publicitario li{
+    width:100%;
+    
+}
 
+@keyframes cambiarImagen{
+    0%{margin-left:0}
+    30%{margin-left:0}
 
+    33%{margin-left:-100%}
+    60%{margin-left:-100%}
+
+    63%{margin-left:-200%}
+    100%{margin-left:-200%}
+}
 
