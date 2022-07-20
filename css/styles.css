@@ -160,3 +160,29 @@ padding:5px;
     100%{margin-left:-200%}
 }
 
+/* SERVICIOS CONTAINER */
+.servicios-container{
+    display: flex;
+    height: 8rem;
+    background-color:rgb(238, 238, 238);
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top:2rem;
+}
+.servicios-item{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+font-size: 1.6rem;
+}
+.fa-solid.fa-store,.fa-solid.fa-industry, .fa-solid.fa-circle-check, .fa-solid.fa-medal{
+    font-size: 2.5rem;
+    color:rgb(116, 0, 210);
+}
+
+
+
+
+
