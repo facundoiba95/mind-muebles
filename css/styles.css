@@ -99,15 +99,17 @@ padding:5px;
     gap:50px;
     width: 100%;
     height: 40px;
-    background-color: beige;
+    background-color: rgb(116, 0, 210);
     z-index: 1900;
 }
 .contacto-header h3{
+    color:white;
     width: 33.3%;
     text-align: center;
     font-size: 1.3rem;
 }
 .wsp{
+    color:white;
  width: 33.3%;
  display: flex;
  font-size: 1.3rem;
@@ -127,7 +129,7 @@ padding:5px;
     font-size: 1.6rem;
 }
 .fa-brands.fa-instagram, .fa-brands.fa-facebook{
-    color:black;
+    color:white;
 }
 
 /* SLIDER PUBLICITARIO*/
@@ -179,6 +181,44 @@ font-size: 1.6rem;
 }
 .fa-solid.fa-store,.fa-solid.fa-industry, .fa-solid.fa-circle-check, .fa-solid.fa-medal{
     font-size: 2.5rem;
+    color:rgb(116, 0, 210);
+}
+
+/* PRODUCTOS DESTACADOS */
+.productos-destacados-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+    gap:10px;
+}
+.productos-destacados-container h3{
+    font-size:2rem;
+    font-weight: 900;
+}
+.productos-destacados{
+    display: flex;
+    gap:20px;
+}
+.productos-destacados img{
+    width: 20rem;
+}
+.productos-destacados-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    border:1px solid rgb(218, 215, 215);
+    border-radius: 4px;
+    padding: 10px;
+}
+.productos-destacados-item h4{
+    font-size: 1.4rem;
+}
+.productos-destacados-item a{
+    font-weight: 900;
     color:rgb(116, 0, 210);
 }
 
