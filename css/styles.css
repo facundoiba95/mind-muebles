@@ -31,6 +31,7 @@ header{
     position:sticky;
     top:0;
     
+    
 }
 #hamburguesa{
     display: none;
@@ -44,6 +45,7 @@ label{
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    
     
 
 }
@@ -196,6 +198,7 @@ align-items: center;
 justify-content: center;
 height: 100%;
 font-size: 1.6rem;
+width: 100%;
 }
 .fa-solid.fa-store,.fa-solid.fa-industry, .fa-solid.fa-circle-check, .fa-solid.fa-medal{
     font-size: 2.5rem;
@@ -234,6 +237,7 @@ font-size: 1.6rem;
 }
 .productos-destacados-item h4{
     font-size: 1.4rem;
+    text-align: center;
 }
 .productos-destacados-item a{
     font-weight: 900;
@@ -269,7 +273,8 @@ font-size: 1.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.1);}
+    box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.1);
+}
 .workprogress-item:hover{
     transform: scale(1.02);
     transition: all 0.3s;
@@ -317,7 +322,58 @@ font-size: 1.6rem;
     grid-column: 1/7;
     grid-row: 5/7;
 }
-@media (max-width:1025px){
+
+
+@media (max-width:481px){
+
+     /* MODIFICO SERVICIOS CONTAINER*/
+     .servicios-container{
+        flex-direction: column;
+        height: auto;
+        gap:30px;
+        padding:20px;
+     }
+     .servicios-item{
+        flex-direction: row;
+     }
+     .servicios-item i{
+        width: 40%;
+        text-align: center;
+     }
+     .servicios-item h3{
+        width: 100%;
+        font-size: 1.3rem;
+        text-align: start;
+     }
+    /* MODIFICO PRODUCTOS DESTACADOS */
+    .productos-destacados-container{
+        padding:10px;
+    }
+    .productos-destacados-item h4{
+        font-size: 1.6rem;
+    }
+    .productos-destacados-item a{
+        font-size: 1.4rem;
+    }
+    .productos-destacados{
+        flex-direction: column;
+    }
+    /* MODIFICO WORKPROGRESS CONTAINER */
+   
+    .workprogress-item{
+        width: 100%;
+        padding:0;
+    }
+    
+   .workprogress-item .fa-solid.fa-1, .workprogress-item .fa-solid.fa-2, .workprogress-item .fa-solid.fa-3, .workprogress-item .fa-solid.fa-4{
+    font-size: 4rem;
+   }
+    
+
+   
+    
+}
+@media (max-width:769px){
 
     /* MENU HAMBURGUESA */
     label{
@@ -379,8 +435,39 @@ font-size: 1.6rem;
     .submenu-desktop-item{
         display: none;
     }
+
+
+    /* MODIFICO WORKPROGRESS CONTAINER */
+    
+   
+}
+
+@media (max-width: 1024px){
+    .contacto-header h3{
+        font-size: 1.1rem;
+    }
+}
+@media (max-width:1100px) {
+    /* MODIFICO WORKPROGRESS CONTAINER */
+ .fa-solid.fa-1, .fa-solid.fa-2, .fa-solid.fa-3, .fa-solid.fa-4{
+    color:black;
+    font-size: 6rem; 
+}
+.workprogress-item{
+    width: 100%;
+    padding:20px;
+}
+
+/* MODIFICO SERVICIOS CONTAINER*/
+.servicios-container{
+
     
 }
+.servicios-item{
+    text-align: center;
+}
+}
+
 
 
 
