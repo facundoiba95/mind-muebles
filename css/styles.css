@@ -239,71 +239,6 @@ font-size: 1.6rem;
     font-weight: 900;
     color:rgb(116, 0, 210);
 }
-
-@media (max-width:1025px){
-
-    /* MENU HAMBURGUESA */
-    label{
-        display: block;
-    }
-    .menu-desktop{
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        background-color: rgb(146, 0, 209);
-        width: 40%;
-        height: 100vh;
-        left:-40%;
-        top:50px;
-
-    }
-    .menu-desktop-container{
-        flex-direction: row-reverse;
-    }
-    .menu-desktop-item.container{
-        width: 100%;
-        text-align: center;
-    }
-    .menu-desktop-link{
-        color:white;
-    }
-    .menu-desktop-item:hover .menu-desktop-link{
-        color:rgb(227, 227, 227) 
-    }
-    .fa-solid.fa-bars{
-       margin-left: 10px;
-       font-size: 2rem; 
-       cursor: pointer;
-       position: relative;
-    }
-    #hamburguesa:checked ~ .menu-desktop{
-        left:0;
-        transition: all 0.3s ease-in-out;
-       
-    }
-    .submenu-desktop-general-item.container{
-        width: 100%;
-        height: 10vh;
-        background-color: rgb(234, 234, 234);
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid rgb(219, 218, 218);
-    }
-    
-    .submenu-desktop-general{
-        flex-direction: column;
-        top:-17.95rem;
-        left: 100%;
-        height: 100vh;
-        margin:0 auto;
-        
-    }
-    .submenu-desktop-item{
-        display: none;
-    }
-    
-}
  /* WORKPROGRESS CONTAINER */
  .workprogress-container{
     display: flex;
@@ -381,6 +316,70 @@ font-size: 1.6rem;
 .slider-works-item.seis{
     grid-column: 1/7;
     grid-row: 5/7;
+}
+@media (max-width:1025px){
+
+    /* MENU HAMBURGUESA */
+    label{
+        display: block;
+    }
+    .menu-desktop{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(146, 0, 209);
+        width: 40%;
+        height: 100vh;
+        left:-40%;
+        top:50px;
+
+    }
+    .menu-desktop-container{
+        flex-direction: row-reverse;
+    }
+    .menu-desktop-item.container{
+        width: 100%;
+        text-align: center;
+    }
+    .menu-desktop-link{
+        color:white;
+    }
+    .menu-desktop-item:hover .menu-desktop-link{
+        color:rgb(227, 227, 227) 
+    }
+    .fa-solid.fa-bars{
+       margin-left: 10px;
+       font-size: 2rem; 
+       cursor: pointer;
+       position: relative;
+    }
+    #hamburguesa:checked ~ .menu-desktop{
+        left:0;
+        transition: all 0.3s ease-in-out;
+       
+    }
+    .submenu-desktop-general-item.container{
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(234, 234, 234);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgb(219, 218, 218);
+    }
+    
+    .submenu-desktop-general{
+        flex-direction: column;
+        top:-17.95rem;
+        left: 100%;
+        height: 100vh;
+        margin:0 auto;
+        
+    }
+    .submenu-desktop-item{
+        display: none;
+    }
+    
 }
 
 
