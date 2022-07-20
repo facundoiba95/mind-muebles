@@ -1,13 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&family=Archivo:wght@200&family=Comfortaa:wght@300&family=Lato:wght@300;400;700&family=Lobster&family=Open+Sans:wght@300&family=Plus+Jakarta+Sans:wght@200;300&family=Roboto:wght@100;300&family=Source+Sans+Pro:wght@300&family=Work+Sans:ital,wght@0,300;1,300&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    font-family: "Albert Sans";
 }
 header img{
-    width: 200px;
+    width: 180px;
+    height: 50px;
 }
 header{
     display: flex;
     align-items: center;
+    width: 100%;
+    z-index: 2000;
+    position:sticky;
+    top:0;
+    
 }
+.menu-desktop-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    
+
+}
+.menu-desktop{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+.menu-desktop-link{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color:black;
+}
+.menu-desktop-item.container{
+    position: relative;
+    height: 50px;
+    top:13px;
+    
+}
+.submenu-desktop-general{
+    position: absolute;
+    top:38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    visibility: hidden;
+    opacity: 0;
+      
+} 
+.submenu-desktop-general-item.container{
+    background-color: rgb(238, 238, 238);
+    padding:10px;
+    height: 180px;
+}
+.submenu-desktop-general-link{
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.submenu-desktop-item{
+padding:5px;
+}
+.submenu-desktop-link{
+    font-weight: 600;
+    color:rgb(90, 90, 90);
+}
+
+/* HOVERS DE HEADER*/
+.menu-desktop-item:hover .menu-desktop-link{
+    color:rgb(146, 0, 209);
+}
+.menu-desktop-item.container:hover .submenu-desktop-general{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s; 
+}
+.submenu-desktop-link:hover{
+    color:black;
+    transition: all 0.3s;
+}
+
+/* CONTACTO HEADER*/
+.contacto-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    width: 100%;
+    height: 40px;
+    background-color: beige;
+    z-index: 1900;
+}
+.contacto-header h3{
+    width: 33.3%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.wsp{
+ width: 33.3%;
+ display: flex;
+ font-size: 1.3rem;
+ align-items: center;
+ justify-content: center;
+ gap:5px;
+ font-weight: 600;
+}
+.fa-brands.fa-whatsapp{
+    color:yellowgreen;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+.redes-header{
+    width: 33.3%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.fa-brands.fa-instagram, .fa-brands.fa-facebook{
+    color:black;
+}
+
+
+
+
