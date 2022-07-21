@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .tresd{
-    width: 300px;
-    height: 300px;
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
 }
 .titulos-galeria-container{
     display: flex;
@@ -25,10 +27,11 @@
 .galeria-modelos-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    padding:10px;
+    grid-template-rows: 1fr 1fr ;
+    gap: 3rem;
+    padding:1rem;
     margin-top:3rem;
+    
 }
 .galeria-modelos-item img{
     width: 100%;
@@ -39,23 +42,73 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    border:1px solid rgb(235, 235, 235);
+    border-radius:4px;
+    border:1px solid rgb(200, 200, 200);
     height: 100%;
 }
-.galeria-modelos-item.uno{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    
+.galeria-modelos-item a{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color:rgb(116, 0, 210);
+    padding:10px;
 }
-.galeria-modelos-item.dos{
-    grid-column: 2;
+.galeria-modelos-item h4{
+    font-size: 1.4rem;
+    padding:0.5rem;
+    text-align: center;
 }
 
-@media (max-width:480px){
+
+
+@media (min-width:320px){
     .galeria-modelos-container{
         display: flex;
         flex-direction: column;
+    }
+}
+@media (min-width:481px){
+    .galeria-modelos-item h4{
+        font-size: 2rem;
+        padding:1rem;
+    }
+}
+@media(min-width: 768px){
+    .galeria-modelos-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+}
+@media (min-width:1024px){
+    .galeria-modelos-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr ;
+    }
+    .galeria-modelos-item.uno{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .galeria-modelos-item.dos{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .galeria-modelos-item.tres{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .galeria-modelos-item.cuatro{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .galeria-modelos-item.cinco{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .galeria-modelos-item.seis{
+        grid-column: 3/4;
+        grid-row: 2/3;
     }
 }
     
