@@ -343,6 +343,7 @@ width: 100%;
     font-weight: 900;
     margin-left:10px;
     margin-right: 10px;
+    text-align: center;
 }
 footer {
     display: flex;
