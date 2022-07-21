@@ -362,9 +362,7 @@ footer img{
     .slider-publicitario img{
         height: 350px;
     }
-    
     /* MODIFICO WORKPROGRESS CONTAINER */
-    
    .workprogress-item .fa-solid.fa-1, .workprogress-item .fa-solid.fa-2, .workprogress-item .fa-solid.fa-3, .workprogress-item .fa-solid.fa-4{
     font-size: 4rem;
    }
@@ -522,10 +520,13 @@ footer img{
         gap:100px;
         display: flex;
         
+    } 
+}
+@media (max-width:425px){
+    .workprogress-item{
+       padding: 1rem 9rem;
+        
     }
-  
-    
-    
 }
 
 
