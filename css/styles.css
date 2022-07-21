@@ -470,8 +470,13 @@ footer img{
         height: auto;
     }
     
+    /* SLIDER WORKS CONTAINE */
+    .slider-works-container{
+        display: flex;
+        flex-direction: column;
+    }
    
-}
+
 
 @media (max-width: 1024px){
     .contacto-header h3{
