@@ -218,6 +218,7 @@ width: 100%;
 .productos-destacados-container h3{
     font-size:2rem;
     font-weight: 900;
+    text-align: center;
 }
 .productos-destacados{
     display: flex;
@@ -243,6 +244,7 @@ width: 100%;
     font-weight: 900;
     color:rgb(116, 0, 210);
 }
+
  /* WORKPROGRESS CONTAINER */
  .workprogress-container{
     display: flex;
@@ -251,6 +253,7 @@ width: 100%;
     align-items: center;
     width: 100%;
     margin-top: 5rem;
+    text-align: center;
 }
 .workprogress{
     display: flex;
@@ -279,6 +282,11 @@ width: 100%;
     transform: scale(1.02);
     transition: all 0.3s;
 }
+.fa-solid.fa-1, .fa-solid.fa-2, .fa-solid.fa-3, .fa-solid.fa-4{
+    color:black;
+    font-size: 6rem; 
+}
+
 
 /* SLIDER WORKS CONTAINER*/
 .slider-works-container{
@@ -322,57 +330,36 @@ width: 100%;
     grid-column: 1/7;
     grid-row: 5/7;
 }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-top: 1px solid rgb(210, 210, 210);
+}
+footer img{
+    width: 150px;
+}
 
 
-@media (max-width:481px){
-
-     /* MODIFICO SERVICIOS CONTAINER*/
-     .servicios-container{
-        flex-direction: column;
-        height: auto;
-        gap:30px;
-        padding:20px;
-     }
-     .servicios-item{
-        flex-direction: row;
-     }
-     .servicios-item i{
-        width: 40%;
-        text-align: center;
-     }
-     .servicios-item h3{
-        width: 100%;
-        font-size: 1.3rem;
-        text-align: start;
-     }
-    /* MODIFICO PRODUCTOS DESTACADOS */
-    .productos-destacados-container{
-        padding:10px;
+@media (max-width:481px){ 
+    .slider-publicitario img{
+        height: 350px;
     }
-    .productos-destacados-item h4{
-        font-size: 1.6rem;
-    }
-    .productos-destacados-item a{
-        font-size: 1.4rem;
-    }
-    .productos-destacados{
-        flex-direction: column;
-    }
+    
     /* MODIFICO WORKPROGRESS CONTAINER */
-   
-    .workprogress-item{
-        width: 100%;
-        padding:0;
-    }
     
    .workprogress-item .fa-solid.fa-1, .workprogress-item .fa-solid.fa-2, .workprogress-item .fa-solid.fa-3, .workprogress-item .fa-solid.fa-4{
     font-size: 4rem;
    }
-    
-
+   .workprogress-item{
+    padding:100%;
+   }
    
-    
 }
+
+
+
 @media (max-width:769px){
 
     /* MENU HAMBURGUESA */
@@ -436,8 +423,52 @@ width: 100%;
         display: none;
     }
 
+    /* SERVICIOS CONTAINER*/
+    .servicios-container{
+        flex-direction: column;
+        height: auto;
+        gap:30px;
+        padding:20px;
+     }
+     .servicios-item{
+        flex-direction: row;
+     }
+     .servicios-item i{
+        width: 40%;
+        text-align: center;
+     }
+     .servicios-item h3{
+        width: 100%;
+        font-size: 1.3rem;
+        text-align: start;
+     }
+    
+    /* PRODUCTOS DESTACADOS*/
+    .productos-destacados{
+        flex-direction: column;
+    }
+    .productos-destacados-container{
+        padding:15px;
+    }
+    .productos-destacados-item h4{
+        font-size: 1.6rem;
+    }
+    .productos-destacados-item a{
+        font-size: 1.4rem;
+    }
+    .productos-destacados{
+        flex-direction: column;
+    }
 
-    /* MODIFICO WORKPROGRESS CONTAINER */
+    /* WORKPROGRESS */
+    .workprogress{
+        display: flex;
+        flex-direction: column;
+    }
+    .workprogress-item{
+        width: 1000px;
+        height: auto;
+    }
     
    
 }
@@ -446,26 +477,23 @@ width: 100%;
     .contacto-header h3{
         font-size: 1.1rem;
     }
-}
-@media (max-width:1100px) {
-    /* MODIFICO WORKPROGRESS CONTAINER */
- .fa-solid.fa-1, .fa-solid.fa-2, .fa-solid.fa-3, .fa-solid.fa-4{
-    color:black;
-    font-size: 6rem; 
-}
-.workprogress-item{
-    width: 100%;
-    padding:20px;
-}
-
-/* MODIFICO SERVICIOS CONTAINER*/
-.servicios-container{
+    .servicios-item{
+        text-align: center;
+    }
+    .workprogress-item{
+        width: 100%;
+        padding:20%;
+    }
 
     
+
 }
-.servicios-item{
-    text-align: center;
-}
+
+@media (min-width: 1440px){
+    .workprogress{
+        gap:100px;
+        display: flex;
+    }
 }
 
 
