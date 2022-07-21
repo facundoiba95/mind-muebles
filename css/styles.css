@@ -151,6 +151,9 @@ padding:5px;
 .fa-brands.fa-instagram, .fa-brands.fa-facebook{
     color:white;
 }
+.contactanos{
+    display: none;
+}
 
 /* SLIDER PUBLICITARIO*/
 .slider-publicitario-container{
@@ -189,7 +192,7 @@ padding:5px;
     background-color:rgb(238, 238, 238);
     align-items: center;
     justify-content: space-evenly;
-    margin-top:2rem;
+    margin-top:5rem;
 }
 .servicios-item{
 display: flex;
@@ -330,6 +333,15 @@ width: 100%;
     grid-column: 1/7;
     grid-row: 5/7;
 }
+
+.verGaleria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:5rem;
+    font-size: 2rem;
+    font-weight: 900;
+}
 footer {
     display: flex;
     justify-content: center;
@@ -423,6 +435,13 @@ footer img{
         display: none;
     }
 
+    .seguinos{
+        display: none;
+    }
+    .contactanos{
+        display: block;
+    }
+
     /* SERVICIOS CONTAINER*/
     .servicios-container{
         flex-direction: column;
@@ -502,6 +521,6 @@ footer img{
 }
 
 
-
+}
 
 
