@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>MIND Muebles - Sitio Oficial</title>
+   
 </head>
 <body>
+    <ul id="seccion-prueba"></ul>
     <div class="contacto-header">
         <h3 class="seguinos">Seguinos en nuetras redes !</h3>
         <h3 class="contactanos">Seguinos!</h3>
@@ -85,11 +87,14 @@
 
     </header>
     <main>
-        <div class="busqueda-container">
-            <input type="search" name="input-search" id="inputsearch">
-            <p id="resultado"></p>
-            <button class="btnSearch" id="btnSearch" name="input-search" onclick="capturarDatosBusqueda()">Buscar</button>
-        </div>
+        <form class="busqueda-container">
+            <div class="inputs-search">
+                <input type="text" name="input-search" id="search">
+                <input type="submit" class="btnSearch" value="Buscar">
+            </div><br/>
+            <small class="message-search"></small>
+        </form>
+        <ul class="productosFiltrados"></ul>
         <section class="slider-publicitario-container">
             <ul class="slider-publicitario">
                 <li><img src="./img/mueble1.jpg" alt=""></li>
@@ -115,26 +120,26 @@
                 <h3>Garantía</h3>
             </li>
         </ul>
-        <div class="productos-destacados-container">
+        <div class="productos-destacados-container" id="productos-destacados">
             <h3>PRODUCTOS DESTACADOS</h3>
             <ul class="productos-destacados">
-                <li class="productos-destacados-item"><a href="#" class="productos-destacados-link"></a>
+                <li class="productos-destacados-item" id="1"><a href="#" class="productos-destacados-link"></a>
                     <img src="./img/mueble-productos.jpg" alt="">
                     <h4>Descripción del mueble</h4>
                     <a href="#">Ver Más</a> 
                 </li>
-                <li class="productos-destacados-item"><a href="#" class="productos-destacados-link"></a>
+                <li class="productos-destacados-item" id="2"><a href="#" class="productos-destacados-link"></a>
                     <img src="./img/mueble-productos.jpg" alt="">
                     <h4>Descripción del mueble</h4>
                     <a href="#">Ver Más</a>
                 </li>
-                <li class="productos-destacados-item"><a href="#" class="productos-destacados-link"></a>
+                <li class="productos-destacados-item" id="3"><a href="#" class="productos-destacados-link"></a>
                     <img src="./img/mueble-productos.jpg" alt="">
                     
                     <h4>Descripción del mueble</h4>
                     <a href="#">Ver Más</a> 
                 </li>
-                <li class="productos-destacados-item"><a href="#" class="productos-destacados-link"></a>
+                <li class="productos-destacados-item" id="4"><a href="#" class="productos-destacados-link"></a>
                     <img src="./img/mueble-productos.jpg" alt="">
                     <h4>Descripción del mueble</h4>
                     <a href="#">Ver Más</a> 
@@ -153,31 +158,34 @@
         <a class="verGaleria" href="./modelo/galeria3d.html">Visita nuestra Galeria 3D !</a>
         <section class="slider-works-container">
             <ul class="slider-works-item uno">
-                <li><a href=""><img src="./img/mueble2.jpg" alt=""></a></li>
+                <li><a href=""><img src="./img/muebles-mind/diecinueve.jpeg" alt=""></a></li>
             </ul>
             <ul class="slider-works-item dos">
-                <li><a href=""><img src="./img/mueble1.jpg" alt=""></a></li>
+                <li><a href=""><img src="./img/muebles-mind/escritorio_oficina.jpeg" alt=""></a></li>
             </ul>
             <ul class="slider-works-item tres">
-                <li><a href=""><img src="./img/mueble3.jpg" alt=""></a></li>
+                <li><a href=""><img src="./img/muebles-mind/sommier.jpeg" alt=""></a></li>
             </ul>
             <ul class="slider-works-item cuatro">
-                <li><a href=""><img src="./img/mueble1.jpg" alt=""></a></li>
+                <li><a href=""><img src="./img/muebles-mind/oficina.jpeg" alt=""></a></li>
             </ul>
             <ul class="slider-works-item cinco">
-                <li><a href=""><img src="./img/mueble2.jpg" alt=""></a></li>
+                <li><a href=""><img src="./img/muebles-mind/cocina.jpeg" alt=""></a></li>
             </ul>
             <ul class="slider-works-item seis">
-                <li><a href=""><img src="./img/cropped-office2-1.jpg" alt=""></a></li>
+                <li><a href=""><img src="./img/muebles-mind/castillo.jpeg" alt=""></a></li>
             </ul>
         </section>
       
     
     </main>
     <a href="https://api.whatsapp.com/message/ZPP2NGIPVAZ7H1?autoload=1&app_absent=0"><img class="logo-wsp" src="./img/whatsapp-logo-11.png" alt=""></a>
+
+   
     <footer>
-        <img src="./Chee.png" alt="">
+       <a href="index.html"><img src="./Chee.png" alt=""></a> 
     </footer>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
