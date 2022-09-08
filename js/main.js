@@ -47,6 +47,54 @@ let Muebles = [
         color: ['blanco','marron','madera'],
         tags: ['cama','dormitorio','niña','niños','castillo','para niños','muebles para niños'],
         imagen: './img/muebles-mind/castillo-niña.jpeg'
+    },
+    {
+        id:7,
+        nombre: 'Mueble de cocina',
+        categoria: 'cocina',
+        color: ['madera'],
+        tags: ['cocina','mueble de cocina','alacena','arco','bajo mesada','mesada','bajo','combo cocina','combo','despensero'],
+        imagen: './img/muebles-mind/cocina.jpeg'
+    },
+    {
+        id:8,
+        nombre: 'Organizador para dormitorio',
+        categoria: 'dormitorio',
+        color: ['madera'],
+        tags: ['organizador','dormitorio','placard','ropero','armario','multiuso','mueble multiuso'],
+        imagen: './img/muebles-mind/organizador-dormitorio.jpeg'
+    },
+    {
+        id:9,
+        nombre: 'Placard moderno con puertas',
+        categoria: 'dormitorio',
+        color: ['blanco'],
+        tags: ['dormitorio','placard','ropero','pieza','cuarto','puertas','corrediza','puertas corredizas','puerta corrediza','2 puertas','armario'],
+        imagen: './img/muebles-mind/placard-dormitorio-puertas.jpeg'
+    },
+    {
+        id:10,
+        nombre: 'Placard moderno',
+        categoria: 'dormitorio',
+        color: ['blanco'],
+        tags: ['dormitorio','placard','ropero','pieza','cuarto','cajones','con tender','blanco','sin puertas','mueble sin puertas','puertas','armario'],
+        imagen: './img/muebles-mind/placard-dormitorio-sin-puertas.jpeg'
+    },
+    {
+        id:11,
+        nombre: 'Sommier con cajonera',
+        categoria: 'dormitorio',
+        color: ['negro'],
+        tags: ['dormitorio','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones'],
+        imagen: './img/muebles-mind/placard-dormitorio-sin-puertas.jpeg'
+    },
+    {
+        id:12,
+        nombre: 'Rack de Tv con cajones',
+        categoria: 'living',
+        color: ['madera'],
+        tags: ['rack','tv','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
+        imagen: './img/muebles-mind/mueble-televisor.jpeg'
     }
 
 
@@ -76,9 +124,9 @@ const createHtmlMuebles = muebles => {
     </li>`
 }
 
-const createHtmlResult = mueble => `<h4>Hemos encontrado ${mueble.length}</h4>`
+const createHtmlResult = mueble => `<h4 class="result">Hemos encontrado ${mueble.length} productos para la busqueda de "${inputSearch.value}" </h4>`
 const renderResult = mueble => {
-    searchResult.innerHTML = mueble.map(resultado => createHtmlResult(resultado))
+    searchResult.innerHTML = createHtmlResult(mueble)
 }
 
 //funcion para renderizar el Javascript en el Html
@@ -97,29 +145,24 @@ const searchProduct = e => {
         messageSearch.textContent = 'Por favor, ingresa un producto!';
         inputSearch.style.border = '3px solid red';
         nuevoMuebles=[];
-        renderMuebles(nuevoMuebles);
-        
     }else if(
         //filtro elementos que los tags coincidan
+        //si includes devuelve 0, se ejecuta este codigo
         (nuevoMuebles = Muebles.filter(mueble => mueble.tags?.includes(nameProduct)) == 0)
     ){
         messageSearch.textContent='Ups! No se encontro ese producto !';
         inputSearch.style.border = '3px solid red'
         nuevoMuebles = [];
-        renderMuebles(nuevoMuebles);
-        return;
     }else if(
-        // ME QUEDE EN ESTA FUNCION!  funciona cuando si coinciden, pero no muestra el mensaje al no coincidir!
+        //si includes devuelve true(encuentra la coincidencia), se ejecuta esto
         nuevoMuebles = Muebles.filter(mueble => mueble.tags?.includes(nameProduct))
     ){
         messageSearch.textContent = '';
-        inputSearch.style.border= '3px solid rgb(146, 0, 209)'
-        renderMuebles(nuevoMuebles);
-       
-        return;
+        inputSearch.style.border= '3px solid rgb(146, 0, 209)'  
     }
-
-    renderMuebles(nuevoMuebles)
+    
+    renderResult(nuevoMuebles)
+    renderMuebles(nuevoMuebles);
 
 }
 

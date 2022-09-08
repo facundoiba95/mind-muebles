@@ -207,6 +207,11 @@ padding:5px;
    object-fit: cover;
    
 }
+.result{
+    text-align: center;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
 
 
 
