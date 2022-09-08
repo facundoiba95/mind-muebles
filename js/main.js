@@ -18,7 +18,7 @@ let Muebles = [
     },
     {
         id:3,
-        nombre: 'Escritorio',
+        nombre: 'Escritorio de oficina',
         categoria: 'oficina',
         color: ['marron','negro','blanco'],
         tags: ['escritorio','mesa','oficina','office','negro','escritorio de oficina','pc','para pc','oficina'],
@@ -27,7 +27,7 @@ let Muebles = [
     {
         id:4,
         nombre: 'Mostrador recepción',
-        categoria: 'living',
+        categoria: 'oficina',
         color: ['marron','negro','blanco'],
         tags: ['escritorio','living','mesa','mesa de living'],
         imagen: './img/muebles-mind/mostrador-recepcion.jpeg'
@@ -57,6 +57,7 @@ const searchBtn = document.querySelector('.btnSearch')
 const inputSearch = document.querySelector('#search')
 const productosFiltrados = document.querySelector('.productosFiltrados')
 const messageSearch = document.querySelector('.message-search')
+const searchResult = document.querySelector('.search-result')
 
 //nuevo array de Muebles para guardar los filtrados;
 let nuevoMuebles = [];
@@ -71,10 +72,13 @@ const createHtmlMuebles = muebles => {
             <h3 class="titulo-search">${muebles.nombre}</h3>
         <div class="info-product"> 
             <h4 class="categoria-search"><p>Categoria: ${muebles.categoria} </p></h4>
-            <h4 class="colores-search">${muebles.color.join(', ')}</h4>
         </div>
-
     </li>`
+}
+
+const createHtmlResult = mueble => `<h4>Hemos encontrado ${mueble.length}</h4>`
+const renderResult = mueble => {
+    searchResult.innerHTML = mueble.map(resultado => createHtmlResult(resultado))
 }
 
 //funcion para renderizar el Javascript en el Html
@@ -100,7 +104,7 @@ const searchProduct = e => {
         (nuevoMuebles = Muebles.filter(mueble => mueble.tags?.includes(nameProduct)) == 0)
     ){
         messageSearch.textContent='Ups! No se encontro ese producto !';
-        inputSearch.style.border = '3px solid gray'
+        inputSearch.style.border = '3px solid red'
         nuevoMuebles = [];
         renderMuebles(nuevoMuebles);
         return;
@@ -111,9 +115,10 @@ const searchProduct = e => {
         messageSearch.textContent = '';
         inputSearch.style.border= '3px solid rgb(146, 0, 209)'
         renderMuebles(nuevoMuebles);
+       
         return;
     }
-  
+
     renderMuebles(nuevoMuebles)
 
 }
