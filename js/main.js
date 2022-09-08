@@ -4,36 +4,49 @@ let Muebles = [
         nombre: 'Bajo mesada',
         categoria: 'cocina',
         color: ['marron','negro','marron claro'],
-        tags: ['mesada','mueble para cocina','bajo mesada','cocina']
+        tags: ['mesada','mueble para cocina','bajo mesada','cocina'],
+        imagen: './img/muebles-mind/bajomesada.jpeg'
 
     },
     {
         id:2,
-        nombre: 'Sillon dos partes',
-        categoria: 'living',
+        nombre: 'Desayunador',
+        categoria: 'cocina',
         color: ['gris','negro','marron claro'],
-        tags: ['sillon','living','dos cuerpos','sofa','negro']
+        tags: ['mesa','cocina','desayunador','barra','barra para cocina','mesada','desayuno'],
+        imagen: './img/muebles-mind/desayunador.jpeg'
     },
     {
         id:3,
         nombre: 'Escritorio',
         categoria: 'oficina',
         color: ['marron','negro','blanco'],
-        tags: ['escritorio','mesa','oficina','office','negro','escritorio de oficina','pc','para pc','oficina']
+        tags: ['escritorio','mesa','oficina','office','negro','escritorio de oficina','pc','para pc','oficina'],
+        imagen: './img/muebles-mind/escritorio_oficina.jpeg'
     },
     {
         id:4,
-        nombre: 'Mesa',
+        nombre: 'Mostrador recepción',
         categoria: 'living',
         color: ['marron','negro','blanco'],
-        tags: ['escritorio','living','mesa','mesa de living']
+        tags: ['escritorio','living','mesa','mesa de living'],
+        imagen: './img/muebles-mind/mostrador-recepcion.jpeg'
     },
     {
         id:5,
-        nombre: 'Castillo para niños',
+        nombre: 'Castillo para niño',
         categoria: 'dormitorio',
         color: ['blanco','marron','madera'],
-        tags: ['cama','dormitorio','niños','castillo','para niños','muebles para niños']
+        tags: ['cama','dormitorio','niño','niños','castillo','para niños','muebles para niños'],
+        imagen: './img/muebles-mind/castillo.jpeg'
+    },
+    {
+        id:6,
+        nombre: 'Castillo para niña',
+        categoria: 'dormitorio',
+        color: ['blanco','marron','madera'],
+        tags: ['cama','dormitorio','niña','niños','castillo','para niños','muebles para niños'],
+        imagen: './img/muebles-mind/castillo-niña.jpeg'
     }
 
 
@@ -54,15 +67,19 @@ let nuevoMuebles = [];
 const createHtmlMuebles = muebles => {
     return `
     <li class="productosFiltrados-item">
-        <h3 class="titulo-search">${muebles.nombre}</h3>
-        <h4 class="categoria-search">${muebles.categoria}</h4>
-        <h4 class="colores-search">${muebles.color.join(', ')}</h4>
+            <img src="${muebles.imagen}" alt="" class="imagen-product-search">
+            <h3 class="titulo-search">${muebles.nombre}</h3>
+        <div class="info-product"> 
+            <h4 class="categoria-search"><p>Categoria: ${muebles.categoria} </p></h4>
+            <h4 class="colores-search">${muebles.color.join(', ')}</h4>
+        </div>
+
     </li>`
 }
 
 //funcion para renderizar el Javascript en el Html
 const renderMuebles = muebles => {
-    productosFiltrados.innerHTML = muebles.map(mueble => createHtmlMuebles(mueble))
+    productosFiltrados.innerHTML = muebles.map(mueble => createHtmlMuebles(mueble)).join('')
 }
 
 
@@ -97,7 +114,6 @@ const searchProduct = e => {
         return;
     }
   
-
     renderMuebles(nuevoMuebles)
 
 }
