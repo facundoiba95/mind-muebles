@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styleProductos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Productos - MIND Sitio Oficial</title>
 </head>
@@ -68,17 +69,25 @@
                 <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Contacto</a></li>
             </ul>
         </nav>
-        
-
     </header>
-    <div class="productos-container">
-        <h3 class="productos-title"></h3>
-    </div>
+    <form class="busqueda-container">
+        <div class="inputs-search">
+            <input type="text" name="input-search" id="search">
+            <input type="submit" class="btnSearch" value="Buscar">
+        </div><br/>
+        <small class="message-search"></small>
+    </form>
+    <span class="search-result"></span>
+    <ul class="productosFiltrados"></ul>
+    <span class="search-advanced-container"></span>
   
     <footer>
         <img src="./Chee.png" alt="">
     </footer>
-    <script src="./js/main.js"></script>
-   
+
+
+    <script src="./js/arrayMuebles.js" ></script>
+    <script src="./js/searchProducts.js"></script>
+    <script src="./js/productosHtml.js"></script> 
 </body>
 </html>

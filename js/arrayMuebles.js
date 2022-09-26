@@ -1,10 +1,10 @@
-let Muebles = [
+const Muebles = [
     {
         id:1,
-        nombre: 'Bajo mesada',
+        nombre: 'Bajomesada',
         categoria: 'cocina',
         color: ['marron','negro','marron claro'],
-        tags: ['mesada','mueble para cocina','bajo mesada','cocina'],
+        tags: ['mesada','bajomesada','mueble para cocina','bajo mesada','cocina'],
         imagen: './img/muebles-mind/bajomesada.jpeg'
 
     },
@@ -29,7 +29,7 @@ let Muebles = [
         nombre: 'Mostrador recepción',
         categoria: 'oficina',
         color: ['marron','negro','blanco'],
-        tags: ['escritorio','living','mesa','mesa de living'],
+        tags: ['escritorio','living','mesa','mesa de living','recepcion','oficina','mostrador','mostrador recepcion'],
         imagen: './img/muebles-mind/mostrador-recepcion.jpeg'
     },
     {
@@ -53,7 +53,7 @@ let Muebles = [
         nombre: 'Mueble de cocina',
         categoria: 'cocina',
         color: ['madera'],
-        tags: ['cocina','mueble de cocina','alacena','arco','bajo mesada','mesada','bajo','combo cocina','combo','despensero','combo alacena y bajomesada','alacena'],
+        tags: ['cocina','alacenas','bajomesada','mueble de cocina','alacena','arco','bajo mesada','mesada','bajo','combo cocina','combo','despensero','combo alacena y bajomesada','alacena'],
         imagen: './img/muebles-mind/cocina.jpeg'
     },
     {
@@ -117,7 +117,7 @@ let Muebles = [
         nombre: 'Panel de Tv con cajones',
         categoria: 'living',
         color: ['madera'],
-        tags: ['rack','tv','panel tv','panel','panel para tv',,'panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
+        tags: ['rack','tv','panel tv','panel','panel para tv','panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
         imagen: './img/muebles-mind2/panel-tv.jpeg'
     },
     {
@@ -133,7 +133,7 @@ let Muebles = [
         nombre: 'Combo alacena + bajomesada',
         categoria: 'cocina',
         color: ['madera'],
-        tags: ['mesada','mueble para cocina','bajo mesada','cocina','combo','alacena','kit cocina','kit de cocina','alacenas'],
+        tags: ['mesada','bajomesada','mueble para cocina','bajo mesada','cocina','combo','alacena','kit cocina','kit de cocina','alacenas'],
         imagen: './img/muebles-mind2/combo-alacena-bajomesada.jpeg'
     },
     {
@@ -141,7 +141,7 @@ let Muebles = [
         nombre: 'Combo alacena + bajomesada',
         categoria: 'cocina',
         color: ['gris'],
-        tags: ['mesada','mueble para cocina','bajo mesada','cocina','combo','alacena','kit cocina','kit de cocina','alacenas'],
+        tags: ['mesada','bajomesada','mueble para cocina','bajo mesada','cocina','combo','alacena','kit cocina','kit de cocina','alacenas'],
         imagen: './img/muebles-mind2/combo-alacena-bajomesada-2.jpeg'
     },
     {
@@ -208,90 +208,39 @@ let Muebles = [
         tags: ['dormitorio','placard','ropero','pieza','cuarto','puertas','corrediza','puertas corredizas','puerta corrediza','2 puertas','armario','mueble moderno','placard moderno','moderno'],
         imagen: './img/muebles-mind2/placard-con-puertas-3.jpeg'
     },
+    {
+        id:27,
+        nombre: 'Placard moderno puertas corredizas',
+        categoria: ['dormitorio'],
+        color: ['gris'],
+        tags: ['dormitorio','placard','ropero','pieza','cuarto','puertas','corrediza','puertas corredizas','puerta corrediza','2 puertas','armario','mueble moderno','placard moderno','moderno'],
+        imagen: './img/muebles-mind2/placard-con-puertas-4.jpeg'
+    },
+    {
+        id:28,
+        nombre: 'Panel Tv flotante',
+        categoria: ['living'],
+        color: ['madera'],
+        tags: ['rack','tv','panel tv','panel','panel para tv','panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
+        imagen: './img/muebles-mind2/rack-tv-flotante.jpeg'
+    },
+    {
+        id:29,
+        nombre: 'Panel Tv flotante blanco',
+        categoria: ['living'],
+        color: ['blanco'],
+        tags: ['rack','tv','panel tv','panel','panel para tv','panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
+        imagen: './img/muebles-mind2/rack-tv-flotante-2.jpeg'
+    },
+    {
+        id:30,
+        nombre: 'Respaldo sommier con mesa de luz',
+        categoria: ['dormitorio'],
+        color: ['madera'],
+        tags: ['dormitorio','mesa de luz','mesa dormitorio','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier','respaldo','respaldo sommier','respaldo de somier','respaldo somier','respaldo de sommier','respaldar','espaldar','espaldar de sommier','cajon'],
+        imagen: './img/muebles-mind2/respaldo-sommier-con-mesa-de-luz.jpeg'
+    },
+
+
 
 ];
-
-//traigo elementos del html
-const searchBtn = document.querySelector('.btnSearch')
-const inputSearch = document.querySelector('#search')
-const productosFiltrados = document.querySelector('.productosFiltrados')
-const messageSearch = document.querySelector('.message-search')
-const searchResult = document.querySelector('.search-result')
-
-//nuevo array de Muebles para guardar los filtrados;
-let nuevoMuebles = [];
-
-
-
-//funcion para crear el Html
-const createHtmlMuebles = muebles => {
-    return `
-    <li class="productosFiltrados-item">
-            <img src="${muebles.imagen}" alt="" class="imagen-product-search">
-            <h3 class="titulo-search">${muebles.nombre}</h3>
-        <div class="info-product"> 
-            <h4 class="categoria-search"><p>Categoria: ${muebles.categoria} </p></h4>
-        </div>
-    </li>`
-}
-
-const createHtmlResult = mueble => `<h4 class="result">Hemos encontrado ${mueble.length} productos para la busqueda de "${inputSearch.value}" </h4>`
-const renderResult = mueble => {
-    searchResult.innerHTML = createHtmlResult(mueble)
-}
-
-//funcion para renderizar el Javascript en el Html
-const renderMuebles = muebles => {
-    productosFiltrados.innerHTML = muebles.map(mueble => createHtmlMuebles(mueble)).join('')
-}
-
-
-//funcion para buscar un producto
-const searchProduct = e => {
-    e.preventDefault();
-    
-    const nameProduct = inputSearch.value.trim();
-
-    if(!nameProduct.length){
-        messageSearch.textContent = 'Por favor, ingresa un producto!';
-        inputSearch.style.border = '3px solid red';
-        nuevoMuebles=[];
-    }else if(
-        //filtro elementos que los tags coincidan
-        //si includes devuelve 0, se ejecuta este codigo
-        (nuevoMuebles = Muebles.filter(mueble => mueble.tags?.includes(nameProduct)) == 0)
-    ){
-        messageSearch.textContent='Ups! No se encontro ese producto !';
-        inputSearch.style.border = '3px solid red'
-        nuevoMuebles = [];
-    }else if(
-        //si includes devuelve true(encuentra la coincidencia), se ejecuta esto
-        nuevoMuebles = Muebles.filter(mueble => mueble.tags?.includes(nameProduct))
-    ){
-        messageSearch.textContent = '';
-        inputSearch.style.border= '3px solid rgb(146, 0, 209)'  
-    }
-    
-    renderResult(nuevoMuebles)
-    renderMuebles(nuevoMuebles);
-
-}
-
-
-const init = () => {
-    searchBtn.addEventListener('click', searchProduct)
-}
-init();
-
-
-
-
-
-
-
-
-
-
-
-
-
