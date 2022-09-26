@@ -74,11 +74,15 @@ const searchProduct = e => {
 
 
 
+
+
+
 const init = () => {
     busquedaContainer.addEventListener('submit', searchProduct)
 }
 
 init();
+
 
 
 
