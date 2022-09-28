@@ -108,7 +108,7 @@ const searchProduct = e => {
         <li class="productos-destacados-item" id="4"><a href="#" class="productos-destacados-link"></a>
             <img src="${array[25].imagen}" alt="">
             <h4>${array[25].nombre}</h4>
-            <a href="#" class="btnVerMas" data-id=${array[25].id}>Ver Más</a> 
+            <a href="./productos.html" target ="_blank" class="btnVerMas" data-id=${array[25].id}>Ver Más</a> 
         </li>
     </ul>
 
@@ -132,22 +132,28 @@ const searchProduct = e => {
      </li>`;
  }
 
- const render = (array) => {
+ export const render = (array) => {
      seleccion.innerHTML = createHTMLprodSeleccionados(array)
 }
+const saveLocalStorage = array => {
+    localStorage.setItem('productosDestacados', JSON.stringify(array))
+}
 
-let arrayProdDestacados = [];
+export let arrayProdDestacados = JSON.parse(localStorage.getItem('productosDestacados')) || [];
  
  const filtrarProdDestacado = e => {
     
     e.preventDefault()
 
    if(!e.target.classList.contains('btnVerMas')) return;
-    // window.open('./productos.html')
+    window.open('./productos.html')
     const filterID = Number(e.target.dataset.id);
 
     arrayProdDestacados = Muebles.filter(prod => prod.id === filterID)
     console.log(arrayProdDestacados)
+
+
+    saveLocalStorage(arrayProdDestacados)
 
     render(arrayProdDestacados)
     return arrayProdDestacados;
@@ -167,6 +173,8 @@ const init = () => {
     busquedaContainer.addEventListener('submit', searchProduct)
     prodDestacadosIndex.addEventListener('click', filtrarProdDestacado)
     rendercreateHtmlProdDestacados(Muebles);
+    render(arrayProdDestacados)
+    saveLocalStorage(arrayProdDestacados)
 
 }
 
