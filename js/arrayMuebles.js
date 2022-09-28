@@ -1,4 +1,4 @@
-const Muebles = [
+ export const Muebles = [
     {
         id:1,
         nombre: 'Bajomesada',
