@@ -9,7 +9,7 @@ const searchResult = document.querySelector('.search-result')
 const busquedaContainer = document.querySelector('.busqueda-container')
 const searchAdvancedContainer = document.querySelector('.search-advanced-container');
 const prodDestacadosIndex = document.querySelector('#productos-destacados')
-const seleccion = document.querySelector('#seleccion')
+const seleccion = document.querySelector('.seleccion')
 
 
 
@@ -92,23 +92,23 @@ const searchProduct = e => {
         <li class="productos-destacados-item" id="1"><a href="#" class="productos-destacados-link"></a>
             <img src="${array[10].imagen}" alt="">
             <h4>${array[10].nombre}</h4>
-            <a href="javascript:" class="btnVerMas" data-id=${array[10].id} >Ver Más</a> 
+            <a href="#" class="btnVerMas" data-id=${array[10].id} >Ver Más</a> 
         </li>
-        <li class="productos-destacados-item" id="2"><a href="#" class="productos-destacados-link" target="_blank"></a>
+        <li class="productos-destacados-item" id="2"><a href="#" class="productos-destacados-link"></a>
             <img src="${array[13].imagen}" alt="">
             <h4>${array[13].nombre}</h4>
-            <a href="javascript:" class="btnVerMas" data-id=${array[13].id} >Ver Más</a>
+            <a href="#" class="btnVerMas" data-id=${array[13].id} >Ver Más</a>
         </li>
         <li class="productos-destacados-item" id="3"><a href="#" class="productos-destacados-link"></a>
             <img src="${array[5].imagen}" alt="">
             
             <h4>${array[5].nombre}</h4>
-            <a href="javascript:" class="btnVerMas" data-id=${array[5].id} >Ver Más</a> 
+            <a href="#" class="btnVerMas" data-id=${array[5].id} >Ver Más</a> 
         </li>
-        <li class="productos-destacados-item" id="4"><a href="#" class="productos-destacados-link" target=""></a>
+        <li class="productos-destacados-item" id="4"><a href="#" class="productos-destacados-link"></a>
             <img src="${array[25].imagen}" alt="">
             <h4>${array[25].nombre}</h4>
-            <a href="javascript:" class="btnVerMas" data-id=${array[25].id}>Ver Más</a> 
+            <a href="#" class="btnVerMas" data-id=${array[25].id}>Ver Más</a> 
         </li>
     </ul>
 
@@ -118,9 +118,6 @@ const searchProduct = e => {
   const rendercreateHtmlProdDestacados = (array) => {
     prodDestacadosIndex.innerHTML = createHtmlProdDestacados(array);
 }
-
-
-
 
 
 //FUNCIONES PARA RENDERIZAR EN PRODUCTOS.HTML
@@ -136,7 +133,7 @@ const searchProduct = e => {
  }
 
  const render = (array) => {
-    seleccion.innerHTML = createHTMLprodSeleccionados(array)
+     seleccion.innerHTML = createHTMLprodSeleccionados(array)
 }
 
 let arrayProdDestacados = [];
@@ -146,7 +143,7 @@ let arrayProdDestacados = [];
     e.preventDefault()
 
    if(!e.target.classList.contains('btnVerMas')) return;
-    window.open('./productos.html')
+    // window.open('./productos.html')
     const filterID = Number(e.target.dataset.id);
 
     arrayProdDestacados = Muebles.filter(prod => prod.id === filterID)
@@ -169,7 +166,8 @@ let arrayProdDestacados = [];
 const init = () => {
     busquedaContainer.addEventListener('submit', searchProduct)
     prodDestacadosIndex.addEventListener('click', filtrarProdDestacado)
-    rendercreateHtmlProdDestacados(Muebles)
+    rendercreateHtmlProdDestacados(Muebles);
+
 }
 
 init();
