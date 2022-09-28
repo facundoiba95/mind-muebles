@@ -59,14 +59,14 @@ const searchProduct = e => {
     }else if(
         //filtro elementos que los tags coincidan
         //si includes devuelve 0, se ejecuta este codigo
-        (nuevoMuebles = array.filter(mueble => mueble.tags?.includes(nameProduct)) == 0)
+        (nuevoMuebles = Muebles.filter(mueble => mueble.tags?.includes(nameProduct)) == 0)
     ){
         messageSearch.textContent='Ups! No se encontro ese producto !';
         inputSearch.style.border = '3px solid red'
         nuevoMuebles = [];
     }else if(
         //si includes devuelve true(encuentra la coincidencia), se ejecuta esto
-        nuevoMuebles = array.filter(mueble => mueble.tags?.includes(nameProduct))
+        nuevoMuebles = Muebles.filter(mueble => mueble.tags?.includes(nameProduct))
     ){
         messageSearch.textContent = '';
         inputSearch.style.border= '3px solid rgb(146, 0, 209)'  
