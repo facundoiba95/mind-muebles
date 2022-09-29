@@ -19,15 +19,17 @@ let nuevoMuebles = [];
 
 
 //funcion para crear el Html
-const createHtmlMuebles = muebles => {
+export const createHtmlMuebles = muebles => {
     return `
     <li class="productosFiltrados-item">
+        <a href="#" class="link-producto">
             <img src="${muebles.imagen}" alt="" class="imagen-product-search">
             <h3 class="titulo-search">${muebles.nombre}</h3>
         <div class="info-product"> 
             <h4 class="categoria-search"><p>Categoria: ${muebles.categoria} </p></h4>
         </div>
-    </li>`
+        </a>
+   </li>`
 }
 //funcion para renderizar el Javascript en el Html
 const renderMuebles = muebles => {
@@ -135,9 +137,12 @@ const searchProduct = e => {
  export const render = (array) => {
      seleccion.innerHTML = createHTMLprodSeleccionados(array)
 }
-const saveLocalStorage = array => {
+
+//guardo en el localStorage el array de productos filtrados en filtrarProdDestacados
+export const saveLocalStorage = array => {
     localStorage.setItem('productosDestacados', JSON.stringify(array))
 }
+
 
 export let arrayProdDestacados = JSON.parse(localStorage.getItem('productosDestacados')) || [];
  
@@ -146,34 +151,22 @@ export let arrayProdDestacados = JSON.parse(localStorage.getItem('productosDesta
     e.preventDefault()
 
    if(!e.target.classList.contains('btnVerMas')) return;
-    window.open('./productos.html')
+    window.open('./productosEncontrados.html')
     const filterID = Number(e.target.dataset.id);
 
     arrayProdDestacados = Muebles.filter(prod => prod.id === filterID)
-    console.log(arrayProdDestacados)
-
-
+   
     saveLocalStorage(arrayProdDestacados)
-
     render(arrayProdDestacados)
     return arrayProdDestacados;
 }
 
 
 
-// PROBLEMA !!!
-// al hacer click en un producto destacado en index.html, necesito que se
-// muestre en productos.html, osea en un html externo
-//Pero al estar linkeados los archivos js en ambos html, lee etiquetas que no hay
-//y salta un error.
-// como puedo mostrar datos que capto en un html y mostrarlo en otro html diferente
-
-
 const init = () => {
     busquedaContainer.addEventListener('submit', searchProduct)
     prodDestacadosIndex.addEventListener('click', filtrarProdDestacado)
     rendercreateHtmlProdDestacados(Muebles);
-    render(arrayProdDestacados)
     saveLocalStorage(arrayProdDestacados)
 
 }

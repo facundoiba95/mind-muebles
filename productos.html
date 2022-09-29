@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/styleProductos.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Productos - MIND Sitio Oficial</title>
+    <title>Productos - MIND Muebles Sitio Oficial</title>
 </head>
 <body>
+    <div class="contacto-header">
+        <h3 class="seguinos">Seguinos en nuetras redes !</h3>
+        <h3 class="contactanos">Seguinos!</h3>
+        <div class="wsp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>3513513513</p>
+        </div>
+        <div class="redes-header">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
     <header>
         <nav class="menu-desktop-container">
             <a href="./index.html"><img src="logoMind.png" alt=""></a>
@@ -69,6 +81,8 @@
                 <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Contacto</a></li>
             </ul>
         </nav>
+        
+
     </header>
     <form class="busqueda-container">
         <div class="inputs-search">
@@ -79,19 +93,25 @@
     </form>
     <span class="search-result"></span>
     <ul class="productosFiltrados"></ul>
-    <span class="search-advanced-container" ></span>    
-    <div class="productos-destacados-container" id="productos-destacados" style="visibility: hidden; display: none;"></div>
+    <span class="search-advanced-container" style="display: none; visibility:hidden"></span>
     
-    <span class="seleccion" id="seleccion"></span>
-    
-    <footer>
-        <img src="./logoMind.png" alt="">
+    <!-- se muestran todos los productos de array MUEBLES con estilos incluidos en esta etiqueta -->
+     <h3 style="font-size: 2rem;font-weight: 900;text-align: center;margin-top: 5rem;">Mirá nuestros productos !</h3>
+    <div class="showAllMuebles" style="display: flex; flex-direction:row; flex-wrap:wrap; justify-content: center; gap:10px; margin-top: 2rem;"></div>
+
+
+    <footer style="margin-top: 2rem;">
+       <a href="index.html"><img src="./logoMind.png" alt=""></a> 
     </footer>
 
+    <!-- estas etiquetas necesitan renderizarse pero no tienen que ser
+    visibles en este html -->
+    <div class="productos-destacados-container" id="productos-destacados" style="visibility: hidden; display: none;"></div>
+    <span class="seleccion" id="seleccion" style="display: none;"></span>
 
-    
- <script src="./js/productosDestacados.js" type="module"></script>
- <script src="./js/searchProducts.js" type="module"></script>
- <script src="./js/arrayMuebles.js" type="module"  ></script>
+   
+    <script src="./js/searchProducts.js" type="module"></script>
+    <script src="./js/arrayMuebles.js" type="module"  ></script>
+    <script src="./js/productosHtml.js" type="module"></script>
 </body>
 </html>

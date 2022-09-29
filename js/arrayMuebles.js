@@ -244,3 +244,9 @@
 
 
 ];
+
+export const saveLocalStorageMuebles = array => {
+    localStorage.setItem('Muebles', JSON.stringify(array))
+}
+
+saveLocalStorageMuebles(Muebles);

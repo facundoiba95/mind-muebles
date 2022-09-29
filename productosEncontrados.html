@@ -4,24 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styleProductos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>MIND Muebles - Sitio Oficial</title>
+    <title>Productos - MIND Sitio Oficial</title>
 </head>
 <body>
-    <div class="contacto-header">
-        <h3 class="seguinos">Seguinos en nuetras redes !</h3>
-        <h3 class="contactanos">Seguinos!</h3>
-        <div class="wsp">
-            <i class="fa-brands fa-whatsapp"></i>
-            <p>3513513513</p>
-        </div>
-        <div class="redes-header">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-    </div>
     <header>
         <nav class="menu-desktop-container">
             <a href="./index.html"><img src="logoMind.png" alt=""></a>
@@ -81,100 +69,33 @@
                 <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Contacto</a></li>
             </ul>
         </nav>
-        
-
     </header>
-    <main>
-        <form class="busqueda-container">
-            <div class="inputs-search">
-                <input type="text" name="input-search" id="search">
-                <input type="submit" class="btnSearch" value="Buscar">
-            </div><br/>
-            <small class="message-search"></small>
-        </form>
-        <span class="search-result"></span>
-        <ul class="productosFiltrados"></ul>
-        <span class="search-advanced-container"></span>
-        
+    <form class="busqueda-container">
+        <div class="inputs-search">
+            <input type="text" name="input-search" id="search">
+            <input type="submit" class="btnSearch" value="Buscar">
+        </div><br/>
+        <small class="message-search"></small>
+    </form>
+    <span class="search-result"></span>
+    <ul class="productosFiltrados"></ul>
+    <span class="search-advanced-container" ></span>    
 
-        <section class="slider-publicitario-container">
-            <ul class="slider-publicitario">
-                <li><img src="./img/mueble1.jpg" alt=""></li>
-                <li><img src="./img/mueble2.jpg" alt=""></li>
-                <li><img src="./img/mueble3.jpg" alt=""></li>
-            </ul>
-        </section>
-        <ul class="servicios-container">
-            <li class="servicios-item">
-                <i class="fa-solid fa-store"></i>
-                <h3>Retiro en tienda</h3>
-            </li>
-            <li class="servicios-item">
-                <i class="fa-solid fa-industry"></i>
-                <h3>Somos fabricantes</h3>
-            </li>
-            <li class="servicios-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <h3>Calidad asegurada</h3>
-            </li>
-            <li class="servicios-item">
-                <i class="fa-solid fa-medal"></i>
-                <h3>Garantía</h3>
-            </li>
-        </ul>
-
-        
-        <div class="productos-destacados-container" id="productos-destacados"></div>
-        <section class="workprogress-container">
-            <h3>Asi logramos nuestro trabajo</h3>
-            <ul class="workprogress">
-                <li class="workprogress-item"><a href=""><i class="fa-solid fa-1"></i></a></li>
-                <li class="workprogress-item"><a href=""><i class="fa-solid fa-2"></i></a></li>
-                <li class="workprogress-item"><a href=""><i class="fa-solid fa-3"></i></a></li>
-                <li class="workprogress-item"><a href=""><i class="fa-solid fa-4"></i></a></li>
-            </ul> 
-        </section>
-        <a class="verGaleria" href="./modelo/galeria3d.html">Visita nuestra Galeria 3D !</a>
-        <section class="slider-works-container">
-            <ul class="slider-works-item uno">
-                <li><a href=""><img src="./img/muebles-mind2/base-box-sommier.jpeg" alt=""></a></li>
-            </ul>
-            <ul class="slider-works-item dos">
-                <li><a href=""><img src="./img/muebles-mind/escritorio_oficina.jpeg" alt=""></a></li>
-            </ul>
-            <ul class="slider-works-item tres">
-                <li><a href=""><img src="./img/muebles-mind/sommier.jpeg" alt=""></a></li>
-            </ul>
-            <ul class="slider-works-item cuatro">
-                <li><a href=""><img src="./img/muebles-mind/oficina.jpeg" alt=""></a></li>
-            </ul>
-            <ul class="slider-works-item cinco">
-                <li><a href=""><img src="./img/muebles-mind/cocina.jpeg" alt=""></a></li>
-            </ul>
-            <ul class="slider-works-item seis">
-                <li><a href=""><img src="./img/muebles-mind/castillo.jpeg" alt=""></a></li>
-            </ul>
-        </section>
-
-
-
- 
-    </main>
-    <a href="https://api.whatsapp.com/message/ZPP2NGIPVAZ7H1?autoload=1&app_absent=0"><img class="logo-wsp" src="./img/whatsapp-logo-11.png" alt=""></a>
-
+    <span class="seleccion" id="seleccion"></span>
+    
    
-    <footer>
-       <a href="index.html"><img src="./logoMind.png" alt=""></a> 
-    </footer>
- 
 
-    <!-- estas etiquetas necesitan renderizarse pero no tienen que ser
+    
+<!-- estas etiquetas necesitan renderizarse pero no tienen que ser
     visibles en este html -->
-    <span class="seleccion" id="seleccion" style="display: none;"></span>
+    <div class="productos-destacados-container" id="productos-destacados" style="visibility: hidden; display: none;"></div>
 
-    <script src="./js/searchProducts.js" type="module"></script>
-    <script src="./js/arrayMuebles.js" type="module"  ></script>
-
+    
+<footer>
+    <img src="./logoMind.png" alt="">
+</footer>
+ <script src="./js/productosDestacados.js" type="module"></script>
+ <script src="./js/searchProducts.js" type="module"></script>
+ <script src="./js/arrayMuebles.js" type="module"  ></script>
 </body>
-
 </html>
