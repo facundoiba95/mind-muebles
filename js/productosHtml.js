@@ -1,5 +1,4 @@
 import { Muebles } from "./arrayMuebles.js";
-import { saveLocalStorageMuebles } from "./arrayMuebles.js";
 const showAllMuebles = document.querySelector('.showAllMuebles')
 import { createHtmlMuebles } from "./searchProducts.js";
 
