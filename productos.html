@@ -24,94 +24,62 @@
     </div>
     <header>
         <nav class="menu-desktop-container">
-            <a href="./index.html"><img src="logoMind.png" alt=""></a>
-            <label for="hamburguesa">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <input type="checkbox" id="hamburguesa" name="hamburguesa">
+            <a href="javascript:" ><img src="logoMind.png" alt="" class="linkHome"></a>
+            <i class="fa-solid fa-bars"></i>
             <ul class="menu-desktop">
                 <li class="menu-desktop-item"><a href="index.html" class="menu-desktop-link">Inicio</a></li>
-                <li class="menu-desktop-item container"><a href="#" class="menu-desktop-link">Productos <i class="fa-solid fa-chevron-down"></i></a>
+                <li class="menu-desktop-item container"><a href="#" class="menu-desktop-link productos">Productos </a>
                     <ul class="submenu-desktop-general">
-                        <li class="submenu-desktop-general-item container"><a href="#" class="submenu-desktop-general-link"><b>LIVING</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="#" class="submenu-desktop-general-link " data-categoria="living">LIVING</a>
+                            <ul class="sumbmenu-desktop living"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>COMEDOR</b> </a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link " data-categoria="cocina">COCINA</a>
+                            <ul class="sumbmenu-desktop cocina"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>COCINA</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link " data-categoria="dormitorio">DORMITORIO</a>
+                            <ul class="sumbmenu-desktop dormitorio"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>DORMITORIO</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link" data-categoria="oficina">OFICINA</a>
+                            <ul class="sumbmenu-desktop oficina"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>OFICINA</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
-                        </li>
-
                     </ul>
-                
                 </li>
                 <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Mind</a></li>
                 <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Contacto</a></li>
             </ul>
         </nav>
-        
+
 
     </header>
-    <form class="busqueda-container">
+    <form id="busqueda-container">
         <div class="inputs-search">
             <input type="text" name="input-search" id="search">
-            <input type="submit" class="btnSearch" value="Buscar">
+            <button type="submit" class="btnSearch">Buscar</button>
         </div><br/>
         <small class="message-search"></small>
     </form>
     <span class="search-result"></span>
     <ul class="productosFiltrados"></ul>
-    <span class="search-advanced-container" style="display: none; visibility:hidden"></span>
-    
+    <ul class="filtrados"></ul>
+
+    <span class="seleccion" id="seleccion" style="display: flex; justify-content: center; margin-bottom: 3rem;"></span>
     <!-- se muestran todos los productos de array MUEBLES con estilos incluidos en esta etiqueta -->
-     <h3 style="font-size: 2rem;font-weight: 900;text-align: center;margin-top: 5rem;">Mirá nuestros productos !</h3>
-    <div class="showAllMuebles" style="display: flex; flex-direction:row; flex-wrap:wrap; justify-content: center; gap:1rem; margin-top: 2rem;padding-bottom: 2rem; background-color: rgb(92, 92, 92);padding-top: 2rem;"></div>
+    <h3 style="font-size: 2rem;font-weight: 900;text-align: center;margin-top: 5rem;">Mirá nuestros productos !</h3>
+    <div class="showAllMuebles"></div>
 
 
+    
     <footer style="margin-top: 2rem;">
-       <a href="index.html"><img src="./logoMind.png" alt=""></a> 
+       <a href="javascript:" ><img src="./logoMind.png" alt="" class="linkHome"></a>
     </footer>
 
     <!-- estas etiquetas necesitan renderizarse pero no tienen que ser
     visibles en este html -->
     <div class="productos-destacados-container" id="productos-destacados" style=" display: none;"></div>
-    <span class="seleccion" id="seleccion" style="display: none;"></span>
+    <span class="search-advanced-container" style="display: none; visibility:hidden"></span>
+   <!-- ----------------------------------------------------------------------------------------------------------------- -->
 
-   
-    <script src="./js/searchProducts.js" type="module"></script>
-    <script src="./js/arrayMuebles.js" type="module"  ></script>
-    <script src="./js/productosHtml.js" type="module"></script>
+    <script src="./js/searchProducts.js" ></script>
+    <script src="./js/arrayMuebles.js"  ></script>
 </body>
 </html>

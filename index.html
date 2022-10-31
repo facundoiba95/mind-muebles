@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>MIND Muebles - Sitio Oficial</title>
@@ -24,84 +24,55 @@
     </div>
     <header>
         <nav class="menu-desktop-container">
-            <a href="./index.html"><img src="logoMind.png" alt=""></a>
-            <label for="hamburguesa">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <input type="checkbox" id="hamburguesa" name="hamburguesa">
+            <a href="javascript:" ><img src="logoMind.png" alt="" class="linkHome"></a>
+            <i class="fa-solid fa-bars"></i>
             <ul class="menu-desktop">
-                <li class="menu-desktop-item"><a href="index.html" class="menu-desktop-link">Inicio</a></li>
-                <li class="menu-desktop-item container"><a href="#" class="menu-desktop-link">Productos</a>
+                <li class="menu-desktop-item"><a href="./productos.html" class="menu-desktop-link">Inicio</a></li>
+                <li class="menu-desktop-item container"><a href="productos.html" class="menu-desktop-link productos">Productos</a>
                     <ul class="submenu-desktop-general">
-                        <li class="submenu-desktop-general-item container"><a href="#" class="submenu-desktop-general-link"><b>LIVING</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="#" class="submenu-desktop-general-link" data-categoria="living">LIVING</a>
+                            <ul class="sumbmenu-desktop living"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>COMEDOR</b> </a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link" data-categoria="cocina">COCINA</a>
+                            <ul class="sumbmenu-desktop cocina"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>COCINA</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link" data-categoria="domitorio">DORMITORIO</a>
+                            <ul class="sumbmenu-desktop dormitorio"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>DORMITORIO</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link" data-categoria="oficina">OFICINA</a>
+                            <ul class="sumbmenu-desktop oficina"></ul>
                         </li>
-                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link"><b>OFICINA</b></a>
-                            <ul class="sumbmenu-desktop">
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                                <li class="submenu-desktop-item"><a href="#" class="submenu-desktop-link">producto</a></li>
-                            </ul>
-                        </li>
-
                     </ul>
-                
                 </li>
                 <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Mind</a></li>
                 <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Contacto</a></li>
             </ul>
+            <div class="modalConsulta__container">
+                <img src="./img/muebles-mind2/base-box-sommier.jpeg" alt="">
+                <h3 class="title__modal">Base box Sommier</h3>
+                <h4 class="id__modal">id: 48</h4>
+                <textarea name="textArea__modal" id="textArea__modal" cols="30" rows="10"></textarea>
+                <button class="btnEnviarConsulta">Enviar Consulta</button>
+            </div>
         </nav>
-        
-
     </header>
     <main>
-        <form class="busqueda-container">
+        <form id="busqueda-container">
             <div class="inputs-search">
                 <input type="text" name="input-search" id="search">
-                <input type="submit" class="btnSearch" value="Buscar">
+                <button type="submit" class="btnSearch" >Buscar</button>
             </div><br/>
             <small class="message-search"></small>
         </form>
         <span class="search-result"></span>
         <ul class="productosFiltrados"></ul>
         <span class="search-advanced-container"></span>
-        
 
         <section class="slider-publicitario-container">
             <ul class="slider-publicitario">
-                <li><img src="./img/mueble1.jpg" alt=""></li>
-                <li><img src="./img/mueble2.jpg" alt=""></li>
-                <li><img src="./img/mueble3.jpg" alt=""></li>
+                <li><img src="./img/muebles-mind/siete.jpeg" alt=""></li>
+                <li><img src="./img/muebles-mind/veintiuno.jpeg" alt=""></li>
+                <li><img src="./img/muebles-mind2/base-box-sommier-2.jpeg" alt=""></li>
             </ul>
         </section>
         <ul class="servicios-container">
@@ -134,7 +105,7 @@
                 <li class="workprogress-item"><a href=""><i class="fa-solid fa-4"></i></a></li>
             </ul> 
         </section>
-        <a class="verGaleria" href="./modelo/galeria3d.html">Visita nuestra Galeria 3D !</a>
+       
         <section class="slider-works-container">
             <ul class="slider-works-item uno">
                 <li><a href=""><img src="./img/muebles-mind2/base-box-sommier.jpeg" alt=""></a></li>
@@ -158,22 +129,26 @@
 
 
 
- 
+  
     </main>
     <a href="https://api.whatsapp.com/message/ZPP2NGIPVAZ7H1?autoload=1&app_absent=0"><img class="logo-wsp" src="./img/whatsapp-logo-11.png" alt=""></a>
 
-   
-    <footer>
-       <a href="index.html"><img src="./logoMind.png" alt=""></a> 
-    </footer>
- 
-<h1>hola</h1>
-    <!-- estas etiquetas necesitan renderizarse pero no tienen que ser
-    visibles en este html -->
-    <span class="seleccion" id="seleccion" style="display: none;"></span>
+    <!-- estas etiquetas se necesitan renderizar pero no se muestran en el dom de index.hmtl -->
+    <span class="seleccion" id="seleccion" style="display: none; justify-content: center; margin-bottom: 3rem;"></span>
+    <div class="showAllMuebles" style="display: none; flex-direction:row; flex-wrap:wrap; justify-content: center; gap:1rem; margin-top: 2rem;padding-bottom: 2rem; background-color: rgb(92, 92, 92);padding-top: 2rem;"></div>
+    <ul class="filtrados" style="display:none"></ul>
 
-    <script src="./js/searchProducts.js" type="module"></script>
-    <script src="./js/arrayMuebles.js" type="module"  ></script>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+    <footer>
+       <a href="javascript:" ><img src="./logoMind.png" alt="" class="linkHome"></a> 
+    </footer>
+
+    <script src="./js/searchProducts.js" ></script>
+    <script src="./js/arrayMuebles.js" ></script>
+    <script src="./js/productosHtml.js" ></script>
+    <!-- <script src="./js/main.js"></script> -->
 
 </body>
 

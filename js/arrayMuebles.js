@@ -1,4 +1,4 @@
- export const Muebles = [
+let Muebles = [
     {
         id:1,
         nombre: 'Bajomesada',
@@ -85,7 +85,7 @@
         nombre: 'Base box sommier con cajonera',
         categoria: 'dormitorio',
         color: ['negro'],
-        tags: ['dormitorio','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier'],
+        tags: ['dormitorio','somier','cama','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier'],
         imagen: './img/muebles-mind/sommier.jpeg'
     },
     {
@@ -125,7 +125,7 @@
         nombre: 'Base box sommier',
         categoria: 'dormitorio',
         color: ['madera'],
-        tags: ['dormitorio','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier'],
+        tags: ['dormitorio','cama','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier'],
         imagen: './img/muebles-mind2/base-box-sommier.jpeg'
     },
     {
@@ -237,7 +237,7 @@
         nombre: 'Respaldo sommier con mesa de luz',
         categoria: ['dormitorio'],
         color: ['madera'],
-        tags: ['dormitorio','mesa de luz','mesa dormitorio','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier','respaldo','respaldo sommier','respaldo de somier','respaldo somier','respaldo de sommier','respaldar','espaldar','espaldar de sommier','cajon'],
+        tags: ['dormitorio','cama','mesa de luz','mesa dormitorio','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier','respaldo','respaldo sommier','respaldo de somier','respaldo somier','respaldo de sommier','respaldar','espaldar','espaldar de sommier','cajon'],
         imagen: './img/muebles-mind2/respaldo-sommier-con-mesa-de-luz.jpeg'
     },
 
@@ -245,8 +245,10 @@
 
 ];
 
-export const saveLocalStorageMuebles = array => {
+const saveLocalStorageMuebles = array => {
     localStorage.setItem('Muebles', JSON.stringify(array))
 }
 
 saveLocalStorageMuebles(Muebles);
+
+document.addEventListener('DOMContentLoaded',saveLocalStorage(Muebles))
