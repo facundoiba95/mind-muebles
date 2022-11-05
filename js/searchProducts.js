@@ -364,11 +364,11 @@ const datosConsulta = e => {
 /* estos datos tienen que ser enviados al backend en JSON
 para poder enviar el email con nodemailer
 */
-const enviarConsulta =async  e => {
+const enviarConsulta = async  e => {
     if(!e.target.classList.contains('btnEnviarConsulta')) return;
     let producto =  JSON.stringify(datosConsulta(e))
-
-    await fetch('https://backend-mindmuebles.herokuapp.com/sendEmail',{
+    // await fetch('https://backend-mindmuebles.herokuapp.com/sendEmail'
+   let envioConsulta= await fetch('https://backend-mindmuebles.herokuapp.com/sendEmail',{
         method:"POST",
         headers:{
             "Content-Type": "application/json"
@@ -376,6 +376,13 @@ const enviarConsulta =async  e => {
         body: producto
     })
 
+    if(envioConsulta.status=== 200){
+        modalConsulta__container.style.display='none';
+        alert('Consulta enviada! En la brevedad nos pondremos en contacto contigo. Muchas gracias por confiar en nosotros !')
+        window.close()
+        window.open('./index.html')
+        }
+    
 
 
 }
