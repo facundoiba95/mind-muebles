@@ -5,7 +5,7 @@ let Muebles = [
         categoria: 'cocina',
         color: ['marron','negro','marron claro'],
         tags: ['mesada','bajomesada','mueble para cocina','bajo mesada','cocina'],
-        imagen: './img/muebles-mind/bajomesada.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/bajomesada.jpeg?raw=true'
 
     },
     {
@@ -14,7 +14,7 @@ let Muebles = [
         categoria: 'cocina',
         color: ['gris','negro','marron claro'],
         tags: ['mesa','cocina','desayunador','barra','barra para cocina','mesada','desayuno'],
-        imagen: './img/muebles-mind/desayunador.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/desayunador.jpeg?raw=true'
     },
     {
         id:3,
@@ -22,7 +22,7 @@ let Muebles = [
         categoria: 'oficina',
         color: ['marron','negro','blanco'],
         tags: ['escritorio','mesa','oficina','office','negro','escritorio de oficina','pc','para pc','oficina'],
-        imagen: './img/muebles-mind/escritorio_oficina.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/escritorio_oficina.jpeg?raw=true'
     },
     {
         id:4,
@@ -30,7 +30,7 @@ let Muebles = [
         categoria: 'oficina',
         color: ['marron','negro','blanco'],
         tags: ['escritorio','living','mesa','mesa de living','recepcion','oficina','mostrador','mostrador recepcion'],
-        imagen: './img/muebles-mind/mostrador-recepcion.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/mostrador-recepcion.jpeg?raw=true'
     },
     {
         id:5,
@@ -38,7 +38,7 @@ let Muebles = [
         categoria: 'dormitorio',
         color: ['blanco','marron','madera'],
         tags: ['cama','dormitorio','niño','niños','castillo','para niños','muebles para niños'],
-        imagen: './img/muebles-mind/castillo.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/castillo.jpeg?raw=true'
     },
     {
         id:6,
@@ -46,7 +46,7 @@ let Muebles = [
         categoria: 'dormitorio',
         color: ['blanco','marron','madera'],
         tags: ['cama','dormitorio','niña','niños','castillo','para niños','muebles para niños'],
-        imagen: './img/muebles-mind/castillo-niña.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/castillo-ni%C3%B1a.jpeg?raw=true'
     },
     {
         id:7,
@@ -54,7 +54,7 @@ let Muebles = [
         categoria: 'cocina',
         color: ['madera'],
         tags: ['cocina','alacenas','bajomesada','mueble de cocina','alacena','arco','bajo mesada','mesada','bajo','combo cocina','combo','despensero','combo alacena y bajomesada','alacena'],
-        imagen: './img/muebles-mind/cocina.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/cocina.jpeg?raw=true'
     },
     {
         id:8,
@@ -62,7 +62,7 @@ let Muebles = [
         categoria: ['dormitorio','living'],
         color: ['madera'],
         tags: ['biblioteca','dormitorio','multiuso','libros','armario','multiuso','mueble multiuso'],
-        imagen: './img/muebles-mind/organizador-dormitorio.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/organizador-dormitorio.jpeg?raw=true'
     },
     {
         id:9,
@@ -70,7 +70,7 @@ let Muebles = [
         categoria: 'dormitorio',
         color: ['blanco'],
         tags: ['dormitorio','placard','ropero','pieza','cuarto','puertas','corrediza','puertas corredizas','puerta corrediza','2 puertas','armario'],
-        imagen: './img/muebles-mind/placard-dormitorio-puertas.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/placard-dormitorio-puertas.jpeg?raw=true'
     },
     {
         id:10,
@@ -78,7 +78,7 @@ let Muebles = [
         categoria: 'dormitorio',
         color: ['blanco'],
         tags: ['dormitorio','placard','ropero','pieza','cuarto','cajones','con tender','blanco','sin puertas','mueble sin puertas','puertas','armario'],
-        imagen: './img/muebles-mind/placard-dormitorio-sin-puertas.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/placard-dormitorio-sin-puertas.jpeg?raw=true'
     },
     {
         id:11,
@@ -86,7 +86,7 @@ let Muebles = [
         categoria: 'dormitorio',
         color: ['negro'],
         tags: ['dormitorio','somier','cama','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier'],
-        imagen: './img/muebles-mind/sommier.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/sommier.jpeg?raw=true'
     },
     {
         id:12,
@@ -94,7 +94,7 @@ let Muebles = [
         categoria: 'living',
         color: ['madera'],
         tags: ['rack','panel tv','combo panel tv','flotante','panel flotante','tv','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
-        imagen: './img/muebles-mind/mueble-televisor.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/mueble-televisor.jpeg?raw=true'
     },
     {
         id:13,
@@ -102,7 +102,7 @@ let Muebles = [
         categoria: 'baño',
         color: ['negro'],
         tags: ['soporte','flotante','soporte para lavatorio','baño','para baño','repisa','repisa flotante'],
-        imagen: './img/muebles-mind/soporte-baño.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/soporte-ba%C3%B1o.jpeg?raw=true'
     },
     {
         id:14,
@@ -110,7 +110,7 @@ let Muebles = [
         categoria: 'living',
         color: ['madera'],
         tags: ['rack','tv','panel','panel tv','panel para tv','combo tv','flotante','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
-        imagen: './img/muebles-mind/rack-televisor-flotante.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind/rack-televisor-flotante.jpeg?raw=true'
     },
     {
         id:15,
@@ -118,7 +118,7 @@ let Muebles = [
         categoria: 'living',
         color: ['madera'],
         tags: ['rack','tv','panel tv','panel','panel para tv','panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
-        imagen: './img/muebles-mind2/panel-tv.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/panel-tv.jpeg?raw=true'
     },
     {
         id:16,
@@ -126,7 +126,7 @@ let Muebles = [
         categoria: 'dormitorio',
         color: ['madera'],
         tags: ['dormitorio','cama','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier'],
-        imagen: './img/muebles-mind2/base-box-sommier.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/base-box-sommier.jpeg?raw=true'
     },
     {
         id:17,
@@ -134,7 +134,7 @@ let Muebles = [
         categoria: 'cocina',
         color: ['madera'],
         tags: ['mesada','bajomesada','mueble para cocina','bajo mesada','cocina','combo','alacena','kit cocina','kit de cocina','alacenas'],
-        imagen: './img/muebles-mind2/combo-alacena-bajomesada.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/combo-alacena-bajomesada.jpeg?raw=true'
     },
     {
         id:18,
@@ -142,7 +142,7 @@ let Muebles = [
         categoria: 'cocina',
         color: ['gris'],
         tags: ['mesada','bajomesada','mueble para cocina','bajo mesada','cocina','combo','alacena','kit cocina','kit de cocina','alacenas'],
-        imagen: './img/muebles-mind2/combo-alacena-bajomesada-2.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/combo-alacena-bajomesada-2.jpeg?raw=true'
     },
     {
         id:19,
@@ -150,7 +150,7 @@ let Muebles = [
         categoria: ['cocina','living'],
         color: ['gris oscuro'],
         tags: ['rack','cocina','mueble de cocina','mueble dos puertas','mueble 2 puertas','combo cocina','tv','panel tv','panel','panel para tv','panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
-        imagen: './img/muebles-mind2/combo-racktv-mueble2puertas.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/combo-racktv-mueble2puertas.jpeg?raw=true'
     },
     {
         id:20,
@@ -158,7 +158,7 @@ let Muebles = [
         categoria: ['living','dormitorio'],
         color: ['blanco'],
         tags: ['escritorio','escritorio en l','l','mueble en l','blanco','escritorio pc','pc','mueble para pc','dormitorio','living','esquinero'],
-        imagen: './img/muebles-mind2/escritorio-l.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/escritorio-l.jpeg?raw=true'
     },
     {
         id:21,
@@ -166,7 +166,7 @@ let Muebles = [
         categoria: ['dormitorio'],
         color: ['blanco'],
         tags: ['escritorio','escritorio en l','l','mueble en l','blanco','escritorio pc','pc','mueble para pc','dormitorio','esquinero'],
-        imagen: './img/muebles-mind2/escritorio-l-dormitorio.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/escritorio-l-dormitorio.jpeg?raw=true'
     },
     {
         id:22,
@@ -174,7 +174,7 @@ let Muebles = [
         categoria: ['living'],
         color: ['blanco'],
         tags: ['escritorio','escritorio en l','l','mueble en l','blanco','escritorio pc','pc','mueble para pc','living','esquinero','biblioteca'],
-        imagen: './img/muebles-mind2/escritorio-l-dormitorio-2.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/escritorio-l-dormitorio-2.jpeg?raw=true'
     },
     {
         id:23,
@@ -182,7 +182,7 @@ let Muebles = [
         categoria: ['living','cocina'],
         color: ['blanco'],
         tags: ['mesa','mesa para cocina','mesa cocina','cocina','living','mesa para living','mesa de living','minimalista','mueble minimalista','moderno','muebles modernos','mesa moderna','moderna'],
-        imagen: './img/muebles-mind2/mesa-moderna-minimalista.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/mesa-moderna-minimalista.jpeg?raw=true'
     },
     {
         id:24,
@@ -190,7 +190,7 @@ let Muebles = [
         categoria: ['living','cocina'],
         color: ['Gris oscuro'],
         tags: ['escritorio','escritorio en l','l','mueble en l','blanco','escritorio pc','pc','mueble para pc','dormitorio','living','esquinero'],
-        imagen: './img/muebles-mind2/mueble-pc-l.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/mueble-pc-l.jpeg?raw=true'
     },
     {
         id:25,
@@ -198,7 +198,7 @@ let Muebles = [
         categoria: ['dormitorio'],
         color: ['madera'],
         tags: ['dormitorio','placard','ropero','pieza','cuarto','puertas','corrediza','puertas corredizas','puerta corrediza','2 puertas','armario','mueble moderno','placard moderno','moderno'],
-        imagen: './img/muebles-mind2/placard-con-puertas.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/placard-con-puertas.jpeg?raw=true'
     },
     {
         id:26,
@@ -206,7 +206,7 @@ let Muebles = [
         categoria: ['dormitorio'],
         color: ['madera'],
         tags: ['dormitorio','placard','ropero','pieza','cuarto','puertas','corrediza','puertas corredizas','puerta corrediza','2 puertas','armario','mueble moderno','placard moderno','moderno'],
-        imagen: './img/muebles-mind2/placard-con-puertas-3.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/placard-con-puertas-3.jpeg?raw=true'
     },
     {
         id:27,
@@ -214,7 +214,7 @@ let Muebles = [
         categoria: ['dormitorio'],
         color: ['gris'],
         tags: ['dormitorio','placard','ropero','pieza','cuarto','puertas','corrediza','puertas corredizas','puerta corrediza','2 puertas','armario','mueble moderno','placard moderno','moderno'],
-        imagen: './img/muebles-mind2/placard-con-puertas-4.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/placard-con-puertas-4.jpeg?raw=true'
     },
     {
         id:28,
@@ -222,7 +222,7 @@ let Muebles = [
         categoria: ['living'],
         color: ['madera'],
         tags: ['rack','tv','panel tv','panel','panel para tv','panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
-        imagen: './img/muebles-mind2/rack-tv-flotante.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/rack-tv-flotante.jpeg?raw=true'
     },
     {
         id:29,
@@ -230,7 +230,7 @@ let Muebles = [
         categoria: ['living'],
         color: ['blanco'],
         tags: ['rack','tv','panel tv','panel','panel para tv','panel tv','panel de televisor','televisor','cajonera','rack para tv','rack para televisor','mueble para televisor','mueble para tv','soporte','soporte para tv'],
-        imagen: './img/muebles-mind2/rack-tv-flotante-2.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/rack-tv-flotante-2.jpeg?raw=true'
     },
     {
         id:30,
@@ -238,7 +238,7 @@ let Muebles = [
         categoria: ['dormitorio'],
         color: ['madera'],
         tags: ['dormitorio','cama','mesa de luz','mesa dormitorio','somier','sommier','cajonera','con cajones','cajon','cajones','sommier con cajones','somier con cajones','box','base box sommier','base','base box somier','base con cajones','base sommier','respaldo','respaldo sommier','respaldo de somier','respaldo somier','respaldo de sommier','respaldar','espaldar','espaldar de sommier','cajon'],
-        imagen: './img/muebles-mind2/respaldo-sommier-con-mesa-de-luz.jpeg'
+        imagen: 'https://github.com/facundoiba95/mind-muebles/blob/main/img/muebles-mind2/respaldo-sommier-con-mesa-de-luz.jpeg?raw=true'
     },
 
 

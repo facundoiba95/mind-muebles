@@ -29,6 +29,15 @@ const oficina = document.querySelector('.oficina')
 const submenu_desktop_link = document.querySelector('.submenu-desktop-link')
 const filtrados = document.querySelector('.filtrados')
 
+//modal consulta
+const modalConsulta__container = document.querySelector('.modalConsulta__container')
+const email__modal = document.querySelector('.email__modal')
+const nombre__modal = document.querySelector('.nombre__modal')
+const textArea__modal= document.getElementById('textArea__modal')
+const imagen__modal = document.querySelector('.imagen__modal')
+const localidad__modal = document.querySelector('.localidad__modal')
+// const id__modal = document.querySelector('.')
+
 
 //nuevo array de array para guardar los filtrados;
 let nuevoMuebles = [];
@@ -243,11 +252,13 @@ const mostrarMenu = e => {
 
 
 //funciones para nav header
+let arrayNavHeader = JSON.parse(localStorage.getItem('arrayNavHeader')) || [];
+
 const saveLocalStorageHeader = array => {
     localStorage.setItem('arrayNavHeader', JSON.stringify(array));
 }
 
-let arrayNavHeader = JSON.parse(localStorage.getItem('arrayNavHeader')) || [];
+
 
 const filtrarCategoria = (array,categoria) => {
     return arrayNavHeader = array.filter(mueble => mueble.tags?.includes(categoria))
@@ -288,6 +299,94 @@ const filtrarProductoNavHeader = e => {
 }
 
 
+
+
+///FUNCIONES PARA MODAL CONSULTA
+const createHTMLmodalConsulta = (array) => {
+    const {id,nombre,imagen,categoria} = array;
+    return `
+    <i class="fa-sharp fa-solid fa-xmark"></i>
+    <img src="${imagen}" name="img" alt=""class="imagen__modal">
+                <h3 class="title__modal" name="tituloProducto__modal">Producto: ${nombre}</h3>
+                <p class="categoria__modal">Categoria: ${categoria}</p>
+                <input type="text" placeholder="Nombre y apellido:" name="nombreyapellido" class="nombre__modal"/>
+                <input type="email" placeholder="Email" class="email__modal" />
+                <input type="text" placeholder="Numero de telefono" class="celular__modal" />
+                <input type="text" placeholder="Localidad: " name="localidad" class="localidad__modal">
+                <textarea name="descripcion" id="textArea__modal" cols="30" rows="10"></textarea>
+                <button type="submit" class="btnEnviarConsulta"
+                data-id="${id}"
+                data-nombre="${nombre}"
+                data-imagen="${imagen}"
+                data-categoria="${categoria}">Enviar Consulta</button>
+    `
+}
+const renderCreateHTMLmodalConsulta = array => {
+    modalConsulta__container.innerHTML = createHTMLmodalConsulta(array)
+}
+
+const crearProductoConsulta = e => {
+    const {id,nombre,imagen,categoria} = e.target.dataset;
+    const producto = {id,nombre,imagen,categoria};
+    return producto;
+}
+
+const mostrarModalConsulta = e => {
+    if(!e.target.classList.contains('consultarProducto')) return;
+    modalConsulta__container.style.display="flex"
+    renderCreateHTMLmodalConsulta(crearProductoConsulta(e))
+}
+
+const cerrarModalConsulta = e => {
+    if(!e.target.classList.contains('fa-xmark')) return;
+
+    modalConsulta__container.style.display= "none"
+}
+
+const datosConsulta = e => {
+    const email__modal = document.querySelector('.email__modal')
+    const nombre__modal = document.querySelector('.nombre__modal')
+    const textArea__modal= document.getElementById('textArea__modal')
+    const localidad__modal = document.querySelector('.localidad__modal')
+    const celular__modal = document.querySelector('.celular__modal')
+
+    const emailValue = email__modal.value.trim()
+    const nombreValue = nombre__modal.value.trim();
+    const localidadValue = localidad__modal.value.trim();
+    const textareaValue = textArea__modal.value.trim();
+    const celularValue = celular__modal.value.trim();
+
+    const datosConsulta = {emailValue,nombreValue,localidadValue,textareaValue,celularValue,producto: crearProductoConsulta(e)}
+    return datosConsulta;
+}
+
+
+/* estos datos tienen que ser enviados al backend en JSON
+para poder enviar el email con nodemailer
+*/
+const enviarConsulta =async  e => {
+    if(!e.target.classList.contains('btnEnviarConsulta')) return;
+    let producto =  JSON.stringify(datosConsulta(e))
+
+    await fetch('https://backend-mindmuebles.herokuapp.com/sendEmail',{
+        method:"POST",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: producto
+    })
+
+
+
+}
+
+
+
+
+
+
+
+
 const init = async () => {
     
     //espera hasta que cargue el array de MUEBLES en localstorage y despues renderiza
@@ -302,24 +401,34 @@ const init = async () => {
    
     renderHTMLProdSeleccionado(JSON.parse(localStorage.getItem('productosDestacados')))
 
-   //evento para buscar productos
+//    evento para buscar productos
     document.addEventListener('click', searchProduct)
 
-    //evento para mostrar productos.html
+    // evento para mostrar productos.html
     document.addEventListener('click', showProductosHTML)
     document.addEventListener('click', filtrarProducto)
     
-    //evento para mostrar menuHamburguesa
+    // evento para mostrar menuHamburguesa
     document.addEventListener('click', mostrarMenu)
 
-    //evento para ir a INDEX.html
+    // evento para ir a INDEX.html
     document.addEventListener('click', goHome)
 
-    //evento para abrir producto clickeado en navHeader
+    // evento para abrir producto clickeado en navHeader
     document.addEventListener('click', filtrarProductoNavHeader)
 
     //evento para abrir categoria clickeada en navHeader
     // document.addEventListener('click', mostrarCategorias)
+
+    //evento para renderizar modal de consulta
+    document.addEventListener('click', mostrarModalConsulta)
+
+    //evento para cerrar modal de consulta
+    document.addEventListener('click',cerrarModalConsulta)
+    //evento para enviar email 
+    
+    //evento par enviar consulta 
+    document.addEventListener('click', enviarConsulta)
 
 }
 
