@@ -313,7 +313,7 @@ const createHTMLmodalConsulta = (array) => {
                 <input type="email" placeholder="Email" class="email__modal" />
                 <input type="text" placeholder="Numero de telefono" class="celular__modal" />
                 <input type="text" placeholder="Localidad: " name="localidad" class="localidad__modal">
-                <textarea name="descripcion" id="textArea__modal" cols="30" rows="10"></textarea>
+                <textarea name="descripcion" id="textArea__modal" cols="30" rows="3"></textarea>
                 <button type="submit" class="btnEnviarConsulta"
                 data-id="${id}"
                 data-nombre="${nombre}"
