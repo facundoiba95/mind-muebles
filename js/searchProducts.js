@@ -44,6 +44,12 @@ let nuevoMuebles = [];
 let arrayMuebles = JSON.parse(localStorage.getItem('Muebles'))
 
 
+//variables de redes
+const btnfacebook = document.querySelector('.fa-brands.fa-facebook')
+const btninstagram = document.querySelector('.fa-brands.fa-instagram')
+const btnwhatsapp = document.querySelector('.logo-wsp')
+
+
 //ir a inicio
 const goHome = e => {
     if(!e.target.classList.contains('linkHome')) return;
@@ -429,8 +435,27 @@ const enviarConsultaContacto = async e => {
         window.close()
         window.open('./index.html')
         }
-
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//funciones para abrir links de redes
+const abrirInstagram = e => {
+    if(!e.target.classList.contains('fa-instagram')) return;
+
+    window.open('https://www.instagram.com/mind.muebles/?hl=es-la')
+}
+const abrirFacebook = e => {
+    if(!e.target.classList.contains('fa-facebook')) return;
+
+    window.open("https://www.facebook.com/mindmuebles")
+}
+const enviarWhatsapp = e => {
+    if(!e.target.classList.contains('logo-wsp')) return;
+
+    window.open('https://api.whatsapp.com/message/ZPP2NGIPVAZ7H1?autoload=1&app_absent=0')
+}
+
 
 
 
@@ -492,6 +517,11 @@ const init = async () => {
 
     //evento para enviar consulta de contacto
     document.addEventListener('click', enviarConsultaContacto)
+
+    //eventos para abrir redes
+    document.addEventListener('click', abrirInstagram)
+    document.addEventListener('click', abrirFacebook)
+    document.addEventListener('click', enviarWhatsapp)
 }
 
 init();

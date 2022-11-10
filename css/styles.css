@@ -25,10 +25,14 @@ body{
     transform: scale(1.1);
     transition: all 0.3s ease-in-out ;
 }
-header img{
-    width: 180px;
-    height: 50px;
-    border-radius: 5px;
+header a{
+    margin-top: 5px;
+    width: 35%;
+}
+.linkHome{
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
 }
 header{
     display: flex;
@@ -37,14 +41,15 @@ header{
     z-index: 2000;
     position:sticky;
     top:0;
-    
-    
 }
 #hamburguesa{
     display: none;
 }
 label{
     display: none;
+}
+.fa-solid.fa-bars{
+    display: block;
 }
 .menu-desktop-container{
     width: 100%;
@@ -353,7 +358,7 @@ label{
     height: 250px;
     border-radius: 10px;
 }
-.btnEnviarConsulta{
+.btnEnviarConsulta, .btnEnviarConsultaContacto{
     border-radius: 20px;
     border: none;
     font-weight: 500;
@@ -620,12 +625,66 @@ footer img{
 }
 
 .fa-solid.fa-bars{
-    display: block;
+    display: none;
+}
+
+
+.contacto__container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap:40px;
+}
+.redes__contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    font-size: 1.3rem;
+}
+.redes__contacto li{
+    letter-spacing: 3px;
+}
+
+.redes__item.email{
+    font-size: 1.1rem;
+}
+
+#contacto__consulta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+#contacto__consulta input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
 }
 
 
 
 @media (max-width:481px){ 
+    .fa-solid.fa-bars{
+        display: block;
+        
+    }
+    header a{
+        margin-top: 5px;
+        width: 35%;
+    }
+    .linkHome{
+        width: 80%;
+        height: 40px;
+        border-radius: 3px;
+    }
     .fa-solid.fa-bars{
         display: flex;
     }
@@ -646,6 +705,13 @@ footer img{
     width: 100%;
     height: 100%;
    }
+   #contacto__consulta input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+}
    
 }
 
@@ -657,9 +723,9 @@ footer img{
     label{
         display: block;
     }
-    /* .fa-solid.fa-bars{
-        display: none;
-    } */
+    .fa-solid.fa-bars{
+        display: block;
+    }
     .menu-desktop{
         display: flex;
         position: absolute;
@@ -786,6 +852,15 @@ footer img{
 }
 
 @media (max-width: 1024px){
+    header a{
+        margin-top: 5px;
+        width: 100%;
+    }
+    .linkHome{
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+    }
     .contacto-header h3{
         font-size: 1.1rem;
     }
@@ -799,6 +874,15 @@ footer img{
     
 }
 @media (max-width: 1200px){
+    header a{
+        margin-top: 5px;
+        width: 30%;
+    }
+    .linkHome{
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+    }
     .workprogress-item{
         width: 11rem;
     }
@@ -810,6 +894,15 @@ footer img{
 
 
 @media (min-width: 1440px){
+    header a{
+        margin-top: 5px;
+        width: 15%;
+    }
+    .linkHome{
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+    }
     .workprogress{
         gap:100px;
         display: flex;
@@ -826,7 +919,6 @@ footer img{
 @media (max-width:425px){
     .workprogress-item{
        padding: 1rem 9rem;
-        
     }
 }
 
