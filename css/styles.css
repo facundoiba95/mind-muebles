@@ -669,12 +669,33 @@ footer img{
     padding-left: 5px;
 }
 
+.fa-solid.fa-location-dot {
+    display: flex;
+    gap: 5px;
+    color:red;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 10px;
+}
+.contacto__container i h3{
+    display: flex;
+    gap: 10px;
+    color:white;
+    font-size: 1.2rem;
+}
+.contacto__container iframe{
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 5rem;
+}
+
+
+
 
 
 @media (max-width:481px){ 
     .fa-solid.fa-bars{
         display: block;
-        
     }
     header a{
         margin-top: 5px;
