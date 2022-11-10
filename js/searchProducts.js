@@ -367,8 +367,8 @@ para poder enviar el email con nodemailer
 const enviarConsulta = async  e => {
     if(!e.target.classList.contains('btnEnviarConsulta')) return;
     let producto =  JSON.stringify(datosConsulta(e))
-    // await fetch('https://backend-mindmuebles.herokuapp.com/sendEmail'
-   let envioConsulta= await fetch('https://backend-mindmuebles.herokuapp.com/sendEmail',{
+   let envioConsulta = await fetch('https://backend-mindmuebles.herokuapp.com/sendEmail'
+   ,{
         method:"POST",
         headers:{
             "Content-Type": "application/json"
@@ -376,16 +376,65 @@ const enviarConsulta = async  e => {
         body: producto
     })
 
-    if(envioConsulta.status=== 200){
+    if(envioConsulta.status === 200){
         modalConsulta__container.style.display='none';
         alert('Consulta enviada! En la brevedad nos pondremos en contacto contigo. Muchas gracias por confiar en nosotros !')
         window.close()
         window.open('./index.html')
         }
-    
+}
 
+
+
+//FUNCIONES PARA PAGINA DE CONTACTO
+const mostrarContacto = e => {
+    if(!e.target.classList.contains('contacto')){
+        return;
+    }
+    window.close()
+    window.open('./contacto.html')
+}
+
+const datosContacto = () => {
+    const nombre__contacto = document.querySelector('.nombre__contacto')
+    const email__contacto = document.querySelector('.email__contacto')
+    const celular__contacto = document.querySelector('.celular__contacto')
+    const consulta__contacto = document.getElementById('textArea__contacto')
+    const localidad__contacto = document.querySelector('.localidad__contacto')
+
+    const nombreValue = nombre__contacto.value.trim()
+    const emailValue = email__contacto.value.trim();
+    const celularValue = celular__contacto.value.trim();
+    const consultaValue = consulta__contacto.value.trim();
+    const localidadValue = localidad__contacto.value.trim();
+
+    return {nombreValue,emailValue,celularValue,consultaValue,localidadValue};
+}
+
+const enviarConsultaContacto = async e => {
+    if(!e.target.classList.contains('btnEnviarConsultaContacto')) return;
+
+    let datosConsulta = JSON.stringify(datosContacto(e))
+    let envioConsulta= await fetch('https://backend-mindmuebles.herokuapp.com/sendEmailContacto',{
+        method:"POST",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: datosConsulta
+    })
+
+    if(envioConsulta.status === 200){
+        modalConsulta__container.style.display='none';
+        alert('Consulta enviada! En la brevedad nos pondremos en contacto contigo. Muchas gracias por confiar en nosotros !')
+        window.close()
+        window.open('./index.html')
+        }
 
 }
+
+
+
+
 
 
 
@@ -437,6 +486,12 @@ const init = async () => {
     //evento par enviar consulta 
     document.addEventListener('click', enviarConsulta)
 
+
+    //evento para pagina de contacto
+    document.addEventListener('click', mostrarContacto)
+
+    //evento para enviar consulta de contacto
+    document.addEventListener('click', enviarConsultaContacto)
 }
 
 init();

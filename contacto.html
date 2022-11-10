@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Contacto -  MIND Muebles Sitio Oficial</title>
+</head>
+<body>
+    <div class="contacto-header">
+        <h3 class="seguinos">Seguinos en nuetras redes !</h3>
+        <h3 class="contactanos">Seguinos!</h3>
+        <div class="wsp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>3541560812</p>
+        </div>
+        <div class="redes-header">
+            <a href="https://www.facebook.com/mindmuebles"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/mind.muebles/?hl=es-la"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <header>
+        <nav class="menu-desktop-container">
+            <a href="javascript:" ><img src="logoMind.png" alt="" class="linkHome"></a>
+            <i class="fa-solid fa-bars"></i>
+            <ul class="menu-desktop">
+                <li class="menu-desktop-item"><a href="./productos.html" class="menu-desktop-link">Inicio</a></li>
+                <li class="menu-desktop-item container"><a href="productos.html" class="menu-desktop-link productos">Productos</a>
+                    <ul class="submenu-desktop-general">
+                        <li class="submenu-desktop-general-item container"><a href="#" class="submenu-desktop-general-link" data-categoria="living">LIVING</a>
+                            <ul class="sumbmenu-desktop living"></ul>
+                        </li>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link" data-categoria="cocina">COCINA</a>
+                            <ul class="sumbmenu-desktop cocina"></ul>
+                        </li>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link" data-categoria="domitorio">DORMITORIO</a>
+                            <ul class="sumbmenu-desktop dormitorio"></ul>
+                        </li>
+                        <li class="submenu-desktop-general-item container"><a href="" class="submenu-desktop-general-link" data-categoria="oficina">OFICINA</a>
+                            <ul class="sumbmenu-desktop oficina"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-desktop-item"><a href="#" class="menu-desktop-link">Mind</a></li>
+                <li class="menu-desktop-item"><a href="#" class="menu-desktop-link contacto">Contacto</a></li>
+            </ul>
+            <form class="modalConsulta__container">   
+            </form>
+        </nav>
+    </header>
+
+    <section class="contacto__container">
+        <ul class="redes__contacto">
+            <li class="redes__item instagram"><i class="fa-brands fa-facebook">mindmuebles</i></li>
+            <li class="redes__item facebook"><i class="fa-brands fa-instagram">mind.muebles</i></li>
+            <li class="redes__item whatsapp"><i class="fa-brands fa-whatsapp">3541560812</i></li>
+            <i class="fa-solid fa-envelope">Email: mindmueblesok@gmail.com</i>
+        </ul>
+        <form id="contacto__consulta">
+            <input type="text" placeholder="Ingresa tu nombre" class="nombre__contacto">
+            <input type="text" placeholder="Ingresa Email" class="email__contacto">
+            <input type="text" placeholder="Ingresa Localidad" class="localidad__contacto">
+            <input type="text" placeholder="Ingresa tu numero de telefono" class="celular__contacto">
+            <textarea name="descripcion" id="textArea__contacto" cols="30" rows="3"></textarea>
+            <button type="submit" class="btnEnviarConsultaContacto">Enviar consulta</button>
+        </form>
+    </section>    
+
+    <!-- etiquetas que necesitan ser renderizadas pero no son visibles -->
+    <span class="seleccion" id="seleccion" style="display: none; justify-content: center; margin-bottom: 3rem;"></span>
+    <div class="productos-destacados-container" id="productos-destacados" style="display:none;"></div>
+    <div class="showAllMuebles" style="display:none"></div>
+
+    <script src="./js/searchProducts.js" ></script>
+    <script src="./js/arrayMuebles.js" ></script>
+    <!-- <script src="./js/productosHtml.js" ></script> -->
+</body>
+</html>
